@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>宮内貴之 研究紹介</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="作業療法士・宮内貴之（湘南医療大学）の研究紹介。脳卒中後の注意障害や高次脳機能障害、急性期リハビリテーションの作業療法について、高校生から専門職まで向けてわかりやすく紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column with a sticky section nav; research topics as a three-step clinical sequence (見る→つなぐ→確かめる); publications as a year-indexed list. */
+:root{
+  --bg:#f6f8f9;
+  --surface:#ffffff;
+  --ink:#16222b;
+  --muted:#55646f;
+  --line:#d9e1e6;
+  --accent:#0f7a6c;      /* clinical teal */
+  --accent-soft:#e1f1ee;
+  --mark:#c4542b;        /* lead-author marker */
+  --font-display:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --font-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1519;--surface:#172128;--ink:#e6edf1;--muted:#9aaab4;--line:#2a3640;
+    --accent:#4cc3b0;--accent-soft:#16312d;--mark:#f08a5d;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1519;--surface:#172128;--ink:#e6edf1;--muted:#9aaab4;--line:#2a3640;
+  --accent:#4cc3b0;--accent-soft:#16312d;--mark:#f08a5d;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.85;letter-spacing:.02em;
+  -webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;flex-wrap:wrap}
+.nav .name{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--ink);text-decoration:none}
+.nav ul{display:flex;gap:4px 18px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-size:14px}
+.nav ul a{color:var(--muted);text-decoration:none}
+.nav ul a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding-block:64px 40px}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(30px,6vw,46px);line-height:1.35;margin:0 0 18px;text-wrap:balance}
+h1 .em{background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+.lead{font-size:17px;color:var(--ink);max-width:40em;margin:0 0 28px}
+.who{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
+.who strong{color:var(--ink);font-weight:700;font-size:16px}
+
+section{padding-block:48px;border-top:1px solid var(--line)}
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,4vw,28px);margin:0 0 8px;text-wrap:balance}
+.sec-sub{color:var(--muted);margin:0 0 28px;max-width:40em}
+h3{font-family:var(--font-display);font-weight:700;font-size:19px;margin:0 0 8px;line-height:1.5}
+
+/* primer */
+.primer{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.primer div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.primer p{margin:0;font-size:15px}
+.primer h3{font-size:16px;color:var(--accent)}
+
+/* research steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding-block:24px;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps .num{font-family:var(--font-mono);font-size:13px;color:var(--accent);padding-top:4px}
+.steps .num b{display:block;font-family:var(--font-display);font-size:22px;color:var(--ink);font-weight:900;letter-spacing:0}
+.steps p{margin:0 0 10px;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font-size:12px;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:2px 10px;line-height:1.8}
+.grant{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:15px}
+.grant .k{font-family:var(--font-mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+
+/* publications */
+.pubnote{font-size:13px;color:var(--muted);margin:-12px 0 24px}
+.pubnote .me{color:var(--mark);font-weight:700}
+.year{display:grid;grid-template-columns:72px 1fr;gap:16px;padding-block:14px;border-top:1px solid var(--line)}
+.year:first-of-type{border-top:0}
+.year > span{font-family:var(--font-mono);font-weight:500;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:2px}
+.year ol{list-style:none;margin:0;padding:0;display:grid;gap:16px;min-width:0}
+.pub{font-size:14.5px;line-height:1.7;overflow-wrap:anywhere}
+.pub .t{display:block;font-weight:700;font-size:15px;color:var(--ink)}
+.pub .a{color:var(--muted)}
+.pub .a .me{color:var(--mark);font-weight:700}
+.pub .j{font-style:normal}
+.pub .lead-badge{font-size:11px;border:1px solid var(--mark);color:var(--mark);border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap;vertical-align:1px}
+.pub .doi{font-family:var(--font-mono);font-size:12px}
+details{margin-top:28px}
+summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:17px;padding-block:6px}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.simple{margin:12px 0 0;padding-left:1.2em;display:grid;gap:10px;font-size:14.5px}
+.more{margin-top:24px;font-size:14px}
+
+/* collab */
+.collab{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px clamp(18px,4vw,36px)}
+.collab .eyebrow{color:var(--mark)}
+.collab ul{margin:0 0 20px;padding-left:1.2em;display:grid;gap:6px}
+.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--accent-soft);border-radius:10px;padding:14px 18px;font-size:15px}
+.contact code{font-family:var(--font-mono);font-size:14px;color:var(--ink);user-select:all}
+.contact button{font:inherit;font-size:13px;border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:6px;padding:2px 12px;cursor:pointer}
+.contact button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* profile */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14.5px}
+dt{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+dd{margin:0;min-width:0}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;margin-top:20px}
+
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted)}
+
+@media (max-width:560px){
+  .steps li{grid-template-columns:1fr;gap:4px}
+  .steps .num b{display:inline;margin-left:8px}
+  .year{grid-template-columns:1fr;gap:6px}
+  .nav ul{font-size:13px;gap:2px 14px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="ページ内メニュー">
+  <div class="wrap">
+    <a class="name" href="#top">宮内 貴之</a>
+    <ul>
+      <li><a href="#research">研究内容</a></li>
+      <li><a href="#publications">業績</a></li>
+      <li><a href="#collaborate">共同研究者募集</a></li>
+      <li><a href="#profile">プロフィール</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="wrap hero">
+    <p class="eyebrow">Occupational Therapy × Neuropsychology</p>
+    <h1>脳のはたらきの変化を、<br><span class="em">「生活の動き」</span>から読み解く。</h1>
+    <p class="lead">脳卒中などで脳がダメージを受けると、「集中が続かない」「段取りが立てられない」といった、外からは見えにくい困りごとが起こります。私は作業療法士として、こうした変化を日々の生活の中の行動から捉え、病気になってすぐの時期（急性期）から生活を取り戻す支援につなげる研究をしています。</p>
+    <div class="who">
+      <span><strong>宮内 貴之</strong>（みやうち たかゆき）</span>
+      <span>湘南医療大学 保健医療学部 リハビリテーション学科 作業療法学専攻 助教</span>
+      <span>作業療法士／博士（保健学）</span>
+    </div>
+  </header>
+
+  <section class="wrap" aria-labelledby="primer-h">
+    <h2 id="primer-h">はじめての方へ</h2>
+    <p class="sec-sub">研究の話に入る前に、よく出てくる3つの言葉をかんたんに説明します。</p>
+    <div class="primer">
+      <div>
+        <h3>作業療法（OT）</h3>
+        <p>食事・着替え・トイレ・仕事・趣味など、その人にとって大切な「作業」をもう一度できるように支えるリハビリテーションです。作業療法士は国家資格の専門職です。</p>
+      </div>
+      <div>
+        <h3>高次脳機能障害</h3>
+        <p>脳の損傷によって、注意・記憶・計画を立てる力・言葉・空間の認識などがうまく働かなくなる状態です。見た目ではわかりにくく、「見えない障害」とも呼ばれます。</p>
+      </div>
+      <div>
+        <h3>急性期リハビリテーション</h3>
+        <p>発症や手術の直後、病院で治療を受けている時期から始めるリハビリです。早く始めることで、その後の回復や生活に良い影響があると考えられています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="research" aria-labelledby="research-h">
+    <h2 id="research-h">研究内容</h2>
+    <p class="sec-sub">脳卒中のあとに起こる「注意障害」を中心に、評価の方法を見直し、それを日常生活の自立に結びつけることを目指しています。</p>
+    <ol class="steps">
+      <li>
+        <div class="num">見る<b>評価</b></div>
+        <div>
+          <h3>注意障害を「行動」から評価する</h3>
+          <p>注意の働きは、机の上で行う検査（神経心理学的検査）で調べるのが一般的です。しかし急性期の患者さんは、体調や意識の状態から検査そのものが難しいことも少なくありません。そこで、ふだんの様子を観察して注意の状態を評価する「行動観察評価」に注目し、その使い方や意味を研究しています。</p>
+          <div class="tags"><span class="tag">行動観察評価</span><span class="tag">注意障害</span><span class="tag">神経心理学的検査</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="num">つなぐ<b>生活</b></div>
+        <div>
+          <h3>脳の働きと日常生活動作（ADL）の関係を明らかにする</h3>
+          <p>注意の状態が、食事・トイレなどの日常生活動作の自立とどう関係しているのかを、急性期の脳卒中患者さんのデータから調べています。「どんな状態なら、どんな支援が必要か」を見通せるようになることが目標です。</p>
+          <div class="tags"><span class="tag">日常生活活動（ADL）</span><span class="tag">食事・トイレ動作</span><span class="tag">急性期脳卒中</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="num">確かめる<b>検証</b></div>
+        <div>
+          <h3>評価ツールの精度を確かめる</h3>
+          <p>リハビリの現場で使われる検査が、本当に測りたいものを正しく測れているかを統計的に検証しています。ラッシュ分析による注意検査の検討、前頭葉機能検査（FAB）の分析、注意の評価法に関するスコーピングレビュー、日本語版 Oxford Cognitive Screen の信頼性・妥当性研究などに取り組んでいます。</p>
+          <div class="tags"><span class="tag">ラッシュ分析</span><span class="tag">FAB</span><span class="tag">OCS</span><span class="tag">遂行機能</span></div>
+        </div>
+      </li>
+    </ol>
+    <div class="grant">
+      <div class="k">研究費（研究代表者）</div>
+      <div>日本学術振興会 科学研究費助成事業 若手研究（2025年4月〜2027年3月）<br>「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」</div>
+    </div>
+  </section>
+
+  <section class="wrap" id="publications" aria-labelledby="pub-h">
+    <h2 id="pub-h">業績</h2>
+    <p class="sec-sub">査読付き論文（20編）を新しい順に掲載しています。</p>
+    <p class="pubnote"><span class="me">宮内</span> は本人、<span class="me">筆頭</span> は筆頭著者の論文です。</p>
+
+    <div class="year"><span>2026</span><ol>
+      <li class="pub"><span class="t">Physical function varies according to characteristics of executive dysfunction in patients with stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, Tanabe J, <span class="me">Miyauchi T</span>.</span> <i class="j">International Journal of Clinical and Health Psychology</i> 26(3): 100725. <a class="doi" href="https://doi.org/10.1016/j.ijchp.2026.100725" target="_blank" rel="noopener">doi:10.1016/j.ijchp.2026.100725</a></li>
+      <li class="pub"><span class="t">Preliminary evaluation of a reduced-item version of the frontal assessment battery in patients with subacute stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, <span class="me">Miyauchi T</span>.</span> <i class="j">Applied Neuropsychology: Adult</i>: 1–6. <a class="doi" href="https://doi.org/10.1080/23279095.2026.2668596" target="_blank" rel="noopener">doi:10.1080/23279095.2026.2668596</a></li>
+      <li class="pub"><span class="t">Association between activities of daily living independence and observational attention ratings in patients with acute stroke.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Honda Y, Sakai K, Tanemura R.</span> <i class="j">Brain Injury</i>: 1–6. <a class="doi" href="https://doi.org/10.1080/02699052.2026.2642252" target="_blank" rel="noopener">doi:10.1080/02699052.2026.2642252</a></li>
+      <li class="pub"><span class="t">Relationship between behavioural observational rating scale of attention function and toileting ability in patients with acute stroke: A cross-sectional study.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Nagao T, Sakai K, Tanemura R.</span> <i class="j">British Journal of Occupational Therapy</i>. <a class="doi" href="https://doi.org/10.1177/03080226251412249" target="_blank" rel="noopener">doi:10.1177/03080226251412249</a></li>
+    </ol></div>
+
+    <div class="year"><span>2025</span><ol>
+      <li class="pub"><span class="t">化学療法を実施した造血器腫瘍患者に対する作業療法は倦怠感の減少に関与するか<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 近藤千雅, 佐野文明, 種村留美.</span> <i class="j">神奈川作業療法研究</i> 15(1): 22–29. <a class="doi" href="https://doi.org/10.57293/kanaotjournal.15.1_22" target="_blank" rel="noopener">doi:10.57293/kanaotjournal.15.1_22</a></li>
+      <li class="pub"><span class="t">Long-term Recovery of Mental Health and Social Participation Following Severe COVID-19 with Occupational Therapy: A Case Report.</span><span class="a">Sasaki S, Yokoyama H, <span class="me">Miyauchi T</span>, Sasaki Y, Abe N, Yamanokuchi K, Sugimura S, Nishizawa M.</span> <i class="j">Asian Journal of Occupational Therapy</i> 21(1): 125–128. <a class="doi" href="https://doi.org/10.11596/asiajot.21.125" target="_blank" rel="noopener">doi:10.11596/asiajot.21.125</a></li>
+      <li class="pub"><span class="t">Poststroke Attention Function: A Rasch Analysis of Neuropsychological Tests.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Nagao T, Tanemura R.</span> <i class="j">Asian Journal of Occupational Therapy</i> 21(1): 117–124. <a class="doi" href="https://doi.org/10.11596/asiajot.21.117" target="_blank" rel="noopener">doi:10.11596/asiajot.21.117</a></li>
+      <li class="pub"><span class="t">Survey on Occupational Therapy and Postgraduate Education in Intensive Care Units in Japan.</span><span class="a">Komaba K, <span class="me">Miyauchi T</span>, Kojima N, Yamashita Y, Suzuki H.</span> <i class="j">Asian Journal of Occupational Therapy</i> 21(1): 94–102. <a class="doi" href="https://doi.org/10.11596/asiajot.21.94" target="_blank" rel="noopener">doi:10.11596/asiajot.21.94</a></li>
+      <li class="pub"><span class="t">Components of frontal assessment battery and clinical features in patients with stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, <span class="me">Miyauchi T</span>.</span> <i class="j">Journal of Rehabilitation Medicine</i> 57: jrm43270. <a class="doi" href="https://doi.org/10.2340/jrm.v57.43270" target="_blank" rel="noopener">doi:10.2340/jrm.v57.43270</a></li>
+      <li class="pub"><span class="t">Assessment tools for attention deficits in patients with stroke: a scoping review across components and recovery phases.</span><span class="a">Sakai K, <span class="me">Miyauchi T</span>, Tanabe J.</span> <i class="j">PeerJ</i> 13: e19163. <a class="doi" href="https://doi.org/10.7717/peerj.19163" target="_blank" rel="noopener">doi:10.7717/peerj.19163</a></li>
+    </ol></div>
+
+    <div class="year"><span>2024</span><ol>
+      <li class="pub"><span class="t">意思決定支援ツールを用いて段階的かつ複合的介入を立案したことでBPSDとADLの改善に繋がった脳血管性認知症の事例<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 根本慎司, 種村留美.</span> <i class="j">神奈川作業療法研究</i> 14(1): 11–17. <a class="doi" href="https://doi.org/10.57293/kanaotjournal.14.1_11" target="_blank" rel="noopener">doi:10.57293/kanaotjournal.14.1_11</a></li>
+      <li class="pub"><span class="t">Behavioral Problems and Self-Feeding Independence Among Patients With Acute Stroke: A Single-Center Study.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Tanemura R.</span> <i class="j">The American Journal of Occupational Therapy</i> 78(5).</li>
+      <li class="pub"><span class="t">急性期くも膜下出血患者の注意機能の行動観察評価と日常生活活動の自立度の推移<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 白濱勲二.</span> <i class="j">作業療法ジャーナル</i> 58(2): 161–166.</li>
+    </ol></div>
+
+    <div class="year"><span>2023</span><ol>
+      <li class="pub"><span class="t">Observational Rating Scale of Attention Function is Associated with Independence in Activities of Daily Living.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Sasaki Y, Mogamiya T, Tanemura R, Shirahama K.</span> <i class="j">Asian Journal of Occupational Therapy</i> 19(1): 236–242.</li>
+      <li class="pub"><span class="t">多発性硬化症によるUseless hand syndromeに対して感覚再学習を実施した一例</span><span class="a">佐々木洋子, 佐々木祥太郎, <span class="me">宮内貴之</span>.</span> <i class="j">作業療法</i> 42(4): 532–538.</li>
+      <li class="pub"><span class="t">急性期脳損傷患者におけるBox and Block Testと食事動作の自立度の関連<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨.</span> <i class="j">作業療法</i> 42(3): 263–269.</li>
+    </ol></div>
+
+    <div class="year"><span>2022</span><ol>
+      <li class="pub"><span class="t">Balint症候群を呈した急性期脳出血患者1例のADLの代償方法<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 榊原陽太郎.</span> <i class="j">作業療法</i> 41(4): 487–493.</li>
+    </ol></div>
+
+    <div class="year"><span>2021</span><ol>
+      <li class="pub"><span class="t">急性期脳卒中患者における注意機能の行動観察評価とADLの関連<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 白濱勲二.</span> <i class="j">高次脳機能研究</i> 41(3).</li>
+    </ol></div>
+
+    <div class="year"><span>2019</span><ol>
+      <li class="pub"><span class="t">急性期脳梗塞患者1例における注意機能と日常生活動作能力の推移：行動評価を用いた検討<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 榊原陽太郎.</span> <i class="j">神奈川作業療法研究</i> 9(1).</li>
+      <li class="pub"><span class="t">急性期脳卒中片麻痺患者の日常生活における麻痺側上肢の使用頻度に影響を及ぼす要因 ― 患者特性，身体機能，理解度の観点から ―</span><span class="a">佐々木洋子, 高橋香代子, 佐々木祥太郎, <span class="me">宮内貴之</span>, 榊原陽太郎.</span> <i class="j">作業療法</i> 38(6).</li>
+    </ol></div>
+
+    <details>
+      <summary>著書（分担執筆）</summary>
+      <ul class="simple">
+        <li>『高次脳機能障害を読み解く：病態と評価から考えるリハビリテーション』医学書院, 2026年（担当：注意障害, COLUMN）</li>
+        <li>『OT臨床ハンドブック ポケット版：聖マリアンナ医科大学病院リハビリテーションセンター』三輪書店, 2021年（担当：脳卒中, ALS）</li>
+      </ul>
+    </details>
+    <details>
+      <summary>主な招待講演</summary>
+      <ul class="simple">
+        <li>脳血管疾患領域の急性期作業療法 ― 日本作業療法士協会 重点課題研修（2026年12月）</li>
+        <li>脳卒中を脳機構から読み解く専門作業療法士の挑戦 ― 第60回日本作業療法学会 教育セミナー（2026年11月）</li>
+        <li>Cognitive assessment for stroke patients: From the perspective of occupational therapy ― 1st International Symposium on Neuropsychological Rehabilitation（2025年9月）</li>
+        <li>作業療法士のための脳科学的視点から考える高次脳機能障害（シリーズ：失行・失認／無視症候群／注意障害・遂行機能障害／記憶障害）― エポックセミナー（2025〜2026年）</li>
+        <li>急性期で働く作業療法士が高次脳機能障害について知っておきたいこと ― 大阪作業療法ジャーナル 40(1)（2026年, 依頼原稿）</li>
+      </ul>
+    </details>
+    <details>
+      <summary>研究費・受賞</summary>
+      <ul class="simple">
+        <li>科学研究費助成事業 若手研究「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」（2025〜2027年）</li>
+        <li>日本理学療法学会連合 研究助成「脳卒中後の軽微な認知障害を検出する日本語版OCS Plusの信頼性と妥当性の検証」（2026〜2027年, 共同研究者）</li>
+        <li>東京都公立大学法人 一般財源研究費「ワーキングメモリーを評価するN-back課題の開発」（2024〜2025年, 共同研究者）</li>
+        <li>神奈川県作業療法士会 研究助成「本邦の集中治療センターにおける作業療法教育に関する実態調査」（2023〜2025年, 共同研究者）</li>
+        <li>第18回神奈川県作業療法学会 学会長賞（2021年, 共同演者）</li>
+      </ul>
+    </details>
+    <p class="more">学会発表などを含む全業績は <a href="https://researchmap.jp/tkyk-miyauchi" target="_blank" rel="noopener">researchmap</a> をご覧ください。</p>
+  </section>
+
+  <section class="wrap" id="collaborate" aria-labelledby="collab-h">
+    <div class="collab">
+      <p class="eyebrow">Call for collaborators</p>
+      <h2 id="collab-h">共同研究者を募集しています</h2>
+      <p>臨床の「気になる」を、一緒に研究のかたちにしませんか。所属や職種、経験年数は問いません。</p>
+      <ul>
+        <li>急性期・回復期の病院で、脳卒中や高次脳機能障害のリハビリに携わっている方（多施設でのデータ収集など）</li>
+        <li>注意障害・遂行機能障害などの評価法の開発や検証に関心のある研究者の方</li>
+        <li>研究を始めてみたい臨床の作業療法士・リハビリ職の方</li>
+        <li>作業療法や脳の研究に興味がある学生の方（高校生の進路相談も歓迎します）</li>
+      </ul>
+      <div class="contact">
+        <span>ご連絡はメールで：</span>
+        <code id="mail">takayuki.miyauchi@sums.ac.jp</code>
+        <button type="button" id="copy">コピー</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="profile" aria-labelledby="profile-h">
+    <h2 id="profile-h">プロフィール</h2>
+    <p class="sec-sub">急性期病院で約10年間、作業療法士として脳卒中などの患者さんのリハビリを担当したのち、大学教員として教育と研究に取り組んでいます。</p>
+    <div class="cols">
+      <div>
+        <h3>経歴</h3>
+        <dl>
+          <dt>2024–</dt><dd>湘南医療大学 保健医療学部 作業療法学専攻 助教</dd>
+          <dt>2015–2024</dt><dd>聖マリアンナ医科大学横浜市西部病院 リハビリテーション部 作業療法士</dd>
+          <dt>2013–2015</dt><dd>新横浜リハビリテーション病院 作業療法士</dd>
+        </dl>
+      </div>
+      <div>
+        <h3>学歴・学位</h3>
+        <dl>
+          <dt>2025</dt><dd>神戸大学大学院 保健学研究科 博士（保健学）</dd>
+          <dt>2021</dt><dd>神奈川県立保健福祉大学大学院 修士（リハビリテーション学）</dd>
+          <dt>2013</dt><dd>帝京平成大学 地域医療学部 作業療法学科 卒業</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="links">
+      <a href="https://researchmap.jp/tkyk-miyauchi" target="_blank" rel="noopener">researchmap</a>
+      <a href="https://orcid.org/0000-0001-6903-9382" target="_blank" rel="noopener">ORCID</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 宮内 貴之 ／ 最終更新 2026年11月</div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, t=document.getElementById('mail').textContent;
+  function done(){ b.textContent='コピーしました'; setTimeout(function(){ b.textContent='コピー'; },1800); }
+  function fallback(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+  try { navigator.clipboard.writeText(t).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+</body>
+</html>
