@@ -5,345 +5,472 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>宮内貴之 研究紹介</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="作業療法士・宮内貴之（湘南医療大学）の研究紹介。脳卒中後の注意障害や高次脳機能障害、急性期リハビリテーションの作業療法について、高校生から専門職まで向けてわかりやすく紹介します。">
+<meta name="description" content="作業療法士・宮内貴之（湘南医療大学）の研究紹介。脳卒中後の注意障害や高次脳機能障害、急性期リハビリテーションの作業療法について紹介します。 / Takayuki Miyauchi, OT, PhD — research on attention after stroke and acute-phase occupational therapy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Manrope:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: a single reading column with a sticky section nav; research topics as a three-step clinical sequence (見る→つなぐ→確かめる); publications as a year-indexed list. */
+/* Layout: a deep-navy hero where a living "attention network" is drawn inside a brain silhouette; below, a light reading column (research as three steps, year-indexed publications, a call-for-collaborators panel). */
 :root{
-  --bg:#f6f8f9;
+  --bg:#f5f7f9;
   --surface:#ffffff;
-  --ink:#16222b;
-  --muted:#55646f;
-  --line:#d9e1e6;
-  --accent:#0f7a6c;      /* clinical teal */
-  --accent-soft:#e1f1ee;
-  --mark:#c4542b;        /* lead-author marker */
-  --font-display:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
-  --font-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
-  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --ink:#14212b;
+  --muted:#56656f;
+  --line:#dbe2e7;
+  --accent:#1d5fd1;
+  --accent-soft:#e3ecfb;
+  --spark:#e0683c;
+  --hero:#04123c;
+  --hero-ink:#eaf2f6;
+  --hero-muted:#a9bde3;
+  --font-display:"Manrope","Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
+  --font-body:"Zen Kaku Gothic New","Manrope","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0f1519;--surface:#172128;--ink:#e6edf1;--muted:#9aaab4;--line:#2a3640;
-    --accent:#4cc3b0;--accent-soft:#16312d;--mark:#f08a5d;color-scheme:dark;
+    --bg:#0e151b;--surface:#151f27;--ink:#e5edf2;--muted:#9babb6;--line:#27343e;
+    --accent:#6fa8ff;--accent-soft:#16264a;--spark:#f2875c;--hero:#030d2e;--hero-ink:#eef3fc;--hero-muted:#a3b6dc;color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0f1519;--surface:#172128;--ink:#e6edf1;--muted:#9aaab4;--line:#2a3640;
-  --accent:#4cc3b0;--accent-soft:#16312d;--mark:#f08a5d;color-scheme:dark;
+  --bg:#0e151b;--surface:#151f27;--ink:#e5edf2;--muted:#9babb6;--line:#27343e;
+  --accent:#6fa8ff;--accent-soft:#16264a;--spark:#f2875c;--hero:#030d2e;--hero-ink:#eef3fc;--hero-muted:#a3b6dc;color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.85;letter-spacing:.02em;
-  -webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hero)}
 a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
-.wrap{max-width:860px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.narrow{max-width:880px}
+
+/* language switching */
+html[data-lang="en"] .ja, html:not([data-lang="en"]) .en{display:none !important}
 
 /* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;flex-wrap:wrap}
-.nav .name{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--ink);text-decoration:none}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--hero) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;padding-block:12px;flex-wrap:wrap}
+.nav .name{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--hero-ink);text-decoration:none;letter-spacing:.04em}
+.nav-r{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap}
 .nav ul{display:flex;gap:4px 18px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-size:14px}
-.nav ul a{color:var(--muted);text-decoration:none}
-.nav ul a:hover{color:var(--accent)}
+.nav ul a{color:var(--hero-muted);text-decoration:none}
+.nav ul a:hover{color:var(--hero-ink)}
+.lang{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:2px;background:rgba(255,255,255,.04)}
+.lang button{font:600 12px/1 var(--font-display);letter-spacing:.06em;border:0;background:transparent;color:var(--hero-muted);padding:7px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--hero-ink);color:var(--hero)}
 
 /* hero */
-.hero{padding-block:64px 40px}
-.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
-h1{font-family:var(--font-display);font-weight:900;font-size:clamp(30px,6vw,46px);line-height:1.35;margin:0 0 18px;text-wrap:balance}
-h1 .em{background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
-.lead{font-size:17px;color:var(--ink);max-width:40em;margin:0 0 28px}
-.who{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px}
-.who strong{color:var(--ink);font-weight:700;font-size:16px}
+.hero{background:var(--hero);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,rgba(86,212,255,.6),transparent)}
+.hero .wrap{position:relative;padding-block:88px 72px;min-height:min(640px,78vw)}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#56d4ff;margin:0 0 16px}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,3.6vw,42px);line-height:1.3;margin:0 0 20px;text-wrap:balance;letter-spacing:.01em}
+h1 .ja{font-family:"Zen Kaku Gothic New",var(--font-display);font-weight:900}
+.nw{display:inline-block}
+h1 em{font-style:normal;background:linear-gradient(90deg,#56d4ff,#b9f0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:16.5px;color:var(--hero-muted);max-width:34em;margin:0 0 28px}
+.idcard{display:flex;align-items:center;gap:16px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+.idcard .txt{min-width:0;font-size:13.5px;color:var(--hero-muted);line-height:1.6}
+.idcard strong{display:block;color:var(--hero-ink);font-size:18px;font-family:var(--font-display);font-weight:800}
+.photo{flex:none;width:76px;height:76px;border-radius:50%;overflow:hidden;position:relative;background:linear-gradient(135deg,#0b2a6b,#1d5fd1);box-shadow:0 0 0 3px rgba(86,212,255,.45)}
+.photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
+.photo .ph{position:absolute;inset:0;display:grid;place-items:center;font:800 22px var(--font-display);color:#dff5f0;letter-spacing:.04em}
+.photo.lg{width:160px;height:160px;box-shadow:0 0 0 4px var(--accent-soft)}
+.photo.lg .ph{font-size:40px}
+.hero-bg{position:absolute;inset:0;background:#04123c url("hero-brain.jpg") right center/cover no-repeat}
+.hero-bg::before{content:"";position:absolute;left:74%;top:56%;width:46%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(120,200,255,.38),rgba(80,140,255,.12) 45%,transparent 70%);mix-blend-mode:screen;animation:breathe 5.5s ease-in-out infinite}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,18,60,.94) 0%,rgba(4,18,60,.8) 36%,rgba(4,18,60,.25) 55%,transparent 68%)}
+.hero-bg canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;mix-blend-mode:screen}
+.hero-in{position:relative;z-index:2;max-width:min(500px,48vw)}
+@media (max-width:760px){.hero-in{max-width:none}}
+@keyframes breathe{0%,100%{opacity:.45;transform:translate(-50%,-50%) scale(.96)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.04)}}
+@media (prefers-reduced-motion: reduce){.hero-bg::before{animation:none}}
 
-section{padding-block:48px;border-top:1px solid var(--line)}
-h2{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,4vw,28px);margin:0 0 8px;text-wrap:balance}
-.sec-sub{color:var(--muted);margin:0 0 28px;max-width:40em}
-h3{font-family:var(--font-display);font-weight:700;font-size:19px;margin:0 0 8px;line-height:1.5}
+/* sections */
+section{padding-block:64px}
+section + section{border-top:1px solid var(--line)}
+.kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+h2{font-family:var(--font-display);font-weight:800;font-size:clamp(24px,4vw,32px);margin:0 0 10px;text-wrap:balance;line-height:1.35}
+h2 .ja{font-family:"Zen Kaku Gothic New",var(--font-display);font-weight:700}
+.sec-sub{color:var(--muted);margin:0 0 32px;max-width:40em}
+h3{font-family:var(--font-display);font-weight:700;font-size:18px;margin:0 0 8px;line-height:1.5}
 
-/* primer */
 .primer{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.primer div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
-.primer p{margin:0;font-size:15px}
-.primer h3{font-size:16px;color:var(--accent)}
+.primer > div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.primer p{margin:0;font-size:15px;color:var(--muted)}
+.primer h3{font-size:16px;color:var(--ink);display:flex;align-items:center;gap:10px}
+.primer svg{flex:none;width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 
-/* research steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:s}
-.steps li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding-block:24px;border-bottom:1px dashed var(--line)}
-.steps li:last-child{border-bottom:0}
-.steps .num{font-family:var(--font-mono);font-size:13px;color:var(--accent);padding-top:4px}
-.steps .num b{display:block;font-family:var(--font-display);font-size:22px;color:var(--ink);font-weight:900;letter-spacing:0}
-.steps p{margin:0 0 10px;min-width:0}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.steps li{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.steps .num{display:flex;align-items:baseline;gap:10px;font-family:var(--font-mono);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.steps .num b{font-family:var(--font-display);font-size:30px;font-weight:800;color:var(--accent);letter-spacing:0}
+.steps p{margin:0;font-size:15px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px}
 .tag{font-size:12px;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:2px 10px;line-height:1.8}
-.grant{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:15px}
-.grant .k{font-family:var(--font-mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-12px 0 24px;font:500 13px var(--font-mono);color:var(--muted)}
+.flow span{color:var(--accent)}
+.grant{margin-top:24px;display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 22px;font-size:15px}
+.grant .k{flex:none;font-family:var(--font-mono);font-size:11.5px;color:var(--spark);border:1px solid var(--spark);border-radius:6px;padding:2px 8px;letter-spacing:.06em;margin-top:3px}
 
-/* publications */
-.pubnote{font-size:13px;color:var(--muted);margin:-12px 0 24px}
-.pubnote .me{color:var(--mark);font-weight:700}
-.year{display:grid;grid-template-columns:72px 1fr;gap:16px;padding-block:14px;border-top:1px solid var(--line)}
+.pubnote{font-size:13px;color:var(--muted);margin:-16px 0 24px}
+.pubnote .me{color:var(--spark);font-weight:700}
+.year{display:grid;grid-template-columns:80px 1fr;gap:16px;padding-block:16px;border-top:1px solid var(--line)}
 .year:first-of-type{border-top:0}
-.year > span{font-family:var(--font-mono);font-weight:500;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:2px}
+.year > span{font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.4}
 .year ol{list-style:none;margin:0;padding:0;display:grid;gap:16px;min-width:0}
 .pub{font-size:14.5px;line-height:1.7;overflow-wrap:anywhere}
 .pub .t{display:block;font-weight:700;font-size:15px;color:var(--ink)}
 .pub .a{color:var(--muted)}
-.pub .a .me{color:var(--mark);font-weight:700}
-.pub .j{font-style:normal}
-.pub .lead-badge{font-size:11px;border:1px solid var(--mark);color:var(--mark);border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap;vertical-align:1px}
+.pub .me{color:var(--spark);font-weight:700}
+.pub .lead-badge{font-size:11px;border:1px solid var(--spark);color:var(--spark);border-radius:4px;padding:0 5px;margin-left:6px;white-space:nowrap;vertical-align:1px;font-weight:500}
 .pub .doi{font-family:var(--font-mono);font-size:12px}
-details{margin-top:28px}
-summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:17px;padding-block:6px}
-summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.simple{margin:12px 0 0;padding-left:1.2em;display:grid;gap:10px;font-size:14.5px}
+details{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px 20px}
+details:first-of-type{margin-top:32px}
+summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size:16px;padding-block:10px}
+.simple{margin:0 0 14px;padding-left:1.2em;display:grid;gap:10px;font-size:14.5px}
 .more{margin-top:24px;font-size:14px}
 
-/* collab */
-.collab{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px clamp(18px,4vw,36px)}
-.collab .eyebrow{color:var(--mark)}
-.collab ul{margin:0 0 20px;padding-left:1.2em;display:grid;gap:6px}
-.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--accent-soft);border-radius:10px;padding:14px 18px;font-size:15px}
-.contact code{font-family:var(--font-mono);font-size:14px;color:var(--ink);user-select:all}
-.contact button{font:inherit;font-size:13px;border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:6px;padding:2px 12px;cursor:pointer}
-.contact button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.collab-band{background:var(--hero);color:var(--hero-ink)}
+.collab-band .kicker{color:var(--spark)}
+.collab{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 48px;align-items:start}
+.collab p{color:var(--hero-muted)}
+.collab ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.collab li{position:relative;padding:12px 16px 12px 40px;border:1px solid rgba(255,255,255,.12);border-radius:12px;font-size:15px;background:rgba(255,255,255,.03)}
+.collab li::before{content:"";position:absolute;left:16px;top:21px;width:10px;height:10px;border-radius:50%;background:#56d4ff;box-shadow:0 0 10px #56d4ff}
+.contact{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:15px}
+.contact code{font-family:var(--font-mono);font-size:14px;color:var(--hero-ink);background:rgba(255,255,255,.08);padding:6px 12px;border-radius:8px;user-select:all;overflow-wrap:anywhere}
+.contact button{font:600 13px var(--font-display);border:0;background:#56d4ff;color:#031432;border-radius:8px;padding:8px 16px;cursor:pointer}
 
-/* profile */
+.prof{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px 40px;align-items:start}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
 dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14.5px}
 dt{font-family:var(--font-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 dd{margin:0;min-width:0}
-.links{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;margin-top:20px}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;margin-top:24px}
+.links a{font-family:var(--font-display);font-weight:600}
 
 footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:var(--muted)}
 
+@media (max-width:760px){
+  .hero-bg{inset:0 0 auto;height:min(64vw,340px);background-position:82% center}
+  .hero-bg::after{background:linear-gradient(180deg,transparent 55%,var(--hero) 100%)}
+  .hero .wrap{padding-block:min(60vw,320px) 36px;min-height:0}
+  .collab{grid-template-columns:1fr}
+  .prof{grid-template-columns:1fr}
+}
 @media (max-width:560px){
-  .steps li{grid-template-columns:1fr;gap:4px}
-  .steps .num b{display:inline;margin-left:8px}
-  .year{grid-template-columns:1fr;gap:6px}
-  .nav ul{font-size:13px;gap:2px 14px}
+  .year{grid-template-columns:1fr;gap:4px}
+  .nav ul{display:none}
 }
 </style>
 </head>
 <body>
 
-<nav class="nav" aria-label="ページ内メニュー">
+<nav class="nav" aria-label="Menu">
   <div class="wrap">
-    <a class="name" href="#top">宮内 貴之</a>
-    <ul>
-      <li><a href="#research">研究内容</a></li>
-      <li><a href="#publications">業績</a></li>
-      <li><a href="#collaborate">共同研究者募集</a></li>
-      <li><a href="#profile">プロフィール</a></li>
-    </ul>
+    <a class="name" href="#top"><span class="ja">宮内 貴之</span><span class="en">Takayuki Miyauchi</span></a>
+    <div class="nav-r">
+      <ul>
+        <li><a href="#research"><span class="ja">研究内容</span><span class="en">Research</span></a></li>
+        <li><a href="#publications"><span class="ja">業績</span><span class="en">Publications</span></a></li>
+        <li><a href="#collaborate"><span class="ja">共同研究者募集</span><span class="en">Collaborate</span></a></li>
+        <li><a href="#profile"><span class="ja">プロフィール</span><span class="en">Profile</span></a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Language / 言語">
+        <button type="button" id="btn-ja" data-set="ja" aria-pressed="true">日本語</button>
+        <button type="button" id="btn-en" data-set="en" aria-pressed="false">English</button>
+      </div>
+    </div>
   </div>
 </nav>
 
 <main id="top">
-  <header class="wrap hero">
-    <p class="eyebrow">Occupational Therapy × Neuropsychology</p>
-    <h1>脳のはたらきの変化を、<br><span class="em">「生活の動き」</span>から読み解く。</h1>
-    <p class="lead">脳卒中などで脳がダメージを受けると、「集中が続かない」「段取りが立てられない」といった、外からは見えにくい困りごとが起こります。私は作業療法士として、こうした変化を日々の生活の中の行動から捉え、病気になってすぐの時期（急性期）から生活を取り戻す支援につなげる研究をしています。</p>
-    <div class="who">
-      <span><strong>宮内 貴之</strong>（みやうち たかゆき）</span>
-      <span>湘南医療大学 保健医療学部 リハビリテーション学科 作業療法学専攻 助教</span>
-      <span>作業療法士／博士（保健学）</span>
+  <header class="hero">
+    <div class="hero-bg" aria-hidden="true"><canvas id="fx"></canvas></div>
+    <div class="wrap">
+      <div class="hero-in">
+        <p class="eyebrow">Occupational Therapy × Neuropsychology</p>
+        <h1>
+          <span class="ja"><span class="nw">脳のはたらきの変化を、</span><br><span class="nw"><em>生活の動き</em>から</span><span class="nw">読み解く。</span></span>
+          <span class="en">Reading the brain<br>through <em>everyday actions.</em></span>
+        </h1>
+        <p class="lead ja">脳卒中などで脳がダメージを受けると、「集中が続かない」「段取りが立てられない」といった、外からは見えにくい困りごとが起こります。私は作業療法士として、こうした変化を生活の中の行動から捉え、発症直後（急性期）から生活を取り戻す支援につなげる研究をしています。</p>
+        <p class="lead en">After a stroke, people often struggle with problems that are hard to see from the outside, like keeping focus or planning a task. As an occupational therapist, I study how these changes show up in everyday behavior, and how that knowledge can help patients regain independence from the acute phase onward.</p>
+        <div class="idcard">
+          <div class="photo"><img src="photo.jpg" alt="宮内貴之 / Takayuki Miyauchi" onerror="this.remove()"><span class="ph" aria-hidden="true">TM</span></div>
+          <div class="txt">
+            <strong><span class="ja">宮内 貴之</span><span class="en">Takayuki Miyauchi, OT, PhD</span></strong>
+            <span class="ja">湘南医療大学 保健医療学部 作業療法学専攻 助教<br>作業療法士／博士（保健学）</span>
+            <span class="en">Assistant Professor, Department of Occupational Therapy,<br>Shonan University of Medical Sciences</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="wrap" aria-labelledby="primer-h">
-    <h2 id="primer-h">はじめての方へ</h2>
-    <p class="sec-sub">研究の話に入る前に、よく出てくる3つの言葉をかんたんに説明します。</p>
+  <section class="wrap narrow" aria-labelledby="primer-h">
+    <p class="kicker">Basics</p>
+    <h2 id="primer-h"><span class="ja">はじめての方へ</span><span class="en">Three key ideas</span></h2>
+    <p class="sec-sub"><span class="ja">研究の話に入る前に、よく出てくる3つの言葉をかんたんに説明します。</span><span class="en">A quick guide to three terms that come up throughout this page.</span></p>
     <div class="primer">
       <div>
-        <h3>作業療法（OT）</h3>
-        <p>食事・着替え・トイレ・仕事・趣味など、その人にとって大切な「作業」をもう一度できるように支えるリハビリテーションです。作業療法士は国家資格の専門職です。</p>
+        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 21v-4a5 5 0 0 1 10 0v4"/><circle cx="12" cy="7" r="3.5"/><path d="M4 12h3M17 12h3"/></svg><span class="ja">作業療法（OT）</span><span class="en">Occupational therapy</span></h3>
+        <p class="ja">食事・着替え・トイレ・仕事・趣味など、その人にとって大切な「作業」をもう一度できるように支えるリハビリテーションです。作業療法士は国家資格の専門職です。</p>
+        <p class="en">Rehabilitation that helps people get back to the activities that matter to them, such as eating, dressing, toileting, work and hobbies. Occupational therapists are licensed health professionals.</p>
       </div>
       <div>
-        <h3>高次脳機能障害</h3>
-        <p>脳の損傷によって、注意・記憶・計画を立てる力・言葉・空間の認識などがうまく働かなくなる状態です。見た目ではわかりにくく、「見えない障害」とも呼ばれます。</p>
+        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4a4 4 0 0 0-4 4 3.5 3.5 0 0 0-1 6.5A3.5 3.5 0 0 0 9 19h1V4z"/><path d="M15 4a4 4 0 0 1 4 4 3.5 3.5 0 0 1 1 6.5A3.5 3.5 0 0 1 15 19h-1V4z"/></svg><span class="ja">高次脳機能障害</span><span class="en">Cognitive dysfunction</span></h3>
+        <p class="ja">脳の損傷によって、注意・記憶・計画を立てる力・言葉・空間の認識などがうまく働かなくなる状態です。見た目ではわかりにくく、「見えない障害」とも呼ばれます。</p>
+        <p class="en">When brain injury affects attention, memory, planning, language or spatial awareness. Because it is hard to notice from the outside, it is often called an "invisible disability."</p>
       </div>
       <div>
-        <h3>急性期リハビリテーション</h3>
-        <p>発症や手術の直後、病院で治療を受けている時期から始めるリハビリです。早く始めることで、その後の回復や生活に良い影響があると考えられています。</p>
+        <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><span class="ja">急性期リハビリテーション</span><span class="en">Acute-phase rehab</span></h3>
+        <p class="ja">発症や手術の直後、病院で治療を受けている時期から始めるリハビリです。早く始めることで、その後の回復や生活に良い影響があると考えられています。</p>
+        <p class="en">Rehabilitation that starts in hospital right after onset or surgery. Starting early is thought to support better recovery and daily life later on.</p>
       </div>
     </div>
   </section>
 
-  <section class="wrap" id="research" aria-labelledby="research-h">
-    <h2 id="research-h">研究内容</h2>
-    <p class="sec-sub">脳卒中のあとに起こる「注意障害」を中心に、評価の方法を見直し、それを日常生活の自立に結びつけることを目指しています。</p>
+  <section class="wrap narrow" id="research" aria-labelledby="research-h">
+    <p class="kicker">Research</p>
+    <h2 id="research-h"><span class="ja">研究内容</span><span class="en">Research</span></h2>
+    <p class="sec-sub"><span class="ja">脳卒中のあとに起こる「注意障害」を中心に、評価の方法を見直し、それを日常生活の自立に結びつけることを目指しています。</span><span class="en">My work focuses on attention deficits after stroke: rethinking how we assess them, and linking that assessment to independence in daily life.</span></p>
+    <p class="flow" aria-hidden="true"><span>01 見る / Observe</span>→<span>02 つなぐ / Connect</span>→<span>03 確かめる / Validate</span></p>
     <ol class="steps">
       <li>
-        <div class="num">見る<b>評価</b></div>
-        <div>
-          <h3>注意障害を「行動」から評価する</h3>
-          <p>注意の働きは、机の上で行う検査（神経心理学的検査）で調べるのが一般的です。しかし急性期の患者さんは、体調や意識の状態から検査そのものが難しいことも少なくありません。そこで、ふだんの様子を観察して注意の状態を評価する「行動観察評価」に注目し、その使い方や意味を研究しています。</p>
-          <div class="tags"><span class="tag">行動観察評価</span><span class="tag">注意障害</span><span class="tag">神経心理学的検査</span></div>
-        </div>
+        <div class="num"><b>01</b><span class="ja">見る</span><span class="en">Observe</span></div>
+        <h3><span class="ja">注意障害を「行動」から評価する</span><span class="en">Assessing attention through behavior</span></h3>
+        <p class="ja">注意の働きは机上の検査で調べるのが一般的ですが、急性期の患者さんは体調や意識の状態から検査自体が難しいことも少なくありません。そこで、ふだんの様子を観察して評価する「行動観察評価」の使い方や意味を研究しています。</p>
+        <p class="en">Attention is usually measured with pen-and-paper tests, but many acute patients cannot complete them. I study observational rating scales that assess attention from how patients behave on the ward.</p>
+        <div class="tags"><span class="tag ja">行動観察評価</span><span class="tag en">Observational rating</span><span class="tag ja">注意障害</span><span class="tag en">Attention deficits</span></div>
       </li>
       <li>
-        <div class="num">つなぐ<b>生活</b></div>
-        <div>
-          <h3>脳の働きと日常生活動作（ADL）の関係を明らかにする</h3>
-          <p>注意の状態が、食事・トイレなどの日常生活動作の自立とどう関係しているのかを、急性期の脳卒中患者さんのデータから調べています。「どんな状態なら、どんな支援が必要か」を見通せるようになることが目標です。</p>
-          <div class="tags"><span class="tag">日常生活活動（ADL）</span><span class="tag">食事・トイレ動作</span><span class="tag">急性期脳卒中</span></div>
-        </div>
+        <div class="num"><b>02</b><span class="ja">つなぐ</span><span class="en">Connect</span></div>
+        <h3><span class="ja">脳の働きと日常生活動作（ADL）の関係</span><span class="en">Linking cognition and daily living</span></h3>
+        <p class="ja">注意の状態が、食事やトイレなどの日常生活動作の自立とどう関係するのかを、急性期脳卒中患者さんのデータから調べています。「どんな状態なら、どんな支援が必要か」を見通せるようにすることが目標です。</p>
+        <p class="en">Using data from patients with acute stroke, I examine how attention relates to independence in activities of daily living such as eating and toileting, so clinicians can anticipate what support each patient needs.</p>
+        <div class="tags"><span class="tag">ADL</span><span class="tag ja">急性期脳卒中</span><span class="tag en">Acute stroke</span></div>
       </li>
       <li>
-        <div class="num">確かめる<b>検証</b></div>
-        <div>
-          <h3>評価ツールの精度を確かめる</h3>
-          <p>リハビリの現場で使われる検査が、本当に測りたいものを正しく測れているかを統計的に検証しています。ラッシュ分析による注意検査の検討、前頭葉機能検査（FAB）の分析、注意の評価法に関するスコーピングレビュー、日本語版 Oxford Cognitive Screen の信頼性・妥当性研究などに取り組んでいます。</p>
-          <div class="tags"><span class="tag">ラッシュ分析</span><span class="tag">FAB</span><span class="tag">OCS</span><span class="tag">遂行機能</span></div>
-        </div>
+        <div class="num"><b>03</b><span class="ja">確かめる</span><span class="en">Validate</span></div>
+        <h3><span class="ja">評価ツールの精度を確かめる</span><span class="en">Testing assessment tools</span></h3>
+        <p class="ja">現場で使われる検査が測りたいものを正しく測れているかを検証しています。ラッシュ分析による注意検査の検討、前頭葉機能検査（FAB）の分析、日本語版 Oxford Cognitive Screen の信頼性・妥当性研究などに取り組んでいます。</p>
+        <p class="en">I check whether clinical tests really measure what they claim to, including Rasch analysis of attention tests, studies of the Frontal Assessment Battery (FAB), and validation of the Japanese Oxford Cognitive Screen.</p>
+        <div class="tags"><span class="tag ja">ラッシュ分析</span><span class="tag en">Rasch analysis</span><span class="tag">FAB</span><span class="tag">OCS</span></div>
       </li>
     </ol>
     <div class="grant">
-      <div class="k">研究費（研究代表者）</div>
-      <div>日本学術振興会 科学研究費助成事業 若手研究（2025年4月〜2027年3月）<br>「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」</div>
+      <span class="k">KAKENHI</span>
+      <div class="ja">日本学術振興会 科学研究費助成事業 若手研究（2025〜2027年度, 研究代表者）<br>「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」</div>
+      <div class="en">JSPS Grant-in-Aid for Early-Career Scientists (2025–2027, Principal Investigator)<br>"Rethinking objective assessment of post-stroke attention deficits: the value of observational rating"</div>
     </div>
   </section>
 
-  <section class="wrap" id="publications" aria-labelledby="pub-h">
-    <h2 id="pub-h">業績</h2>
-    <p class="sec-sub">査読付き論文（20編）を新しい順に掲載しています。</p>
-    <p class="pubnote"><span class="me">宮内</span> は本人、<span class="me">筆頭</span> は筆頭著者の論文です。</p>
+  <section class="wrap narrow" id="publications" aria-labelledby="pub-h">
+    <p class="kicker">Publications</p>
+    <h2 id="pub-h"><span class="ja">業績</span><span class="en">Publications</span></h2>
+    <p class="sec-sub"><span class="ja">査読付き論文（20編）を新しい順に掲載しています。</span><span class="en">Peer-reviewed articles (20), newest first.</span></p>
+    <p class="pubnote"><span class="ja"><span class="me">色付きの名前</span>は本人、<span class="me">筆頭</span>は筆頭著者の論文です。</span><span class="en"><span class="me">Highlighted name</span> = me; <span class="me">1st</span> = first-authored.</span></p>
 
     <div class="year"><span>2026</span><ol>
-      <li class="pub"><span class="t">Physical function varies according to characteristics of executive dysfunction in patients with stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, Tanabe J, <span class="me">Miyauchi T</span>.</span> <i class="j">International Journal of Clinical and Health Psychology</i> 26(3): 100725. <a class="doi" href="https://doi.org/10.1016/j.ijchp.2026.100725" target="_blank" rel="noopener">doi:10.1016/j.ijchp.2026.100725</a></li>
-      <li class="pub"><span class="t">Preliminary evaluation of a reduced-item version of the frontal assessment battery in patients with subacute stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, <span class="me">Miyauchi T</span>.</span> <i class="j">Applied Neuropsychology: Adult</i>: 1–6. <a class="doi" href="https://doi.org/10.1080/23279095.2026.2668596" target="_blank" rel="noopener">doi:10.1080/23279095.2026.2668596</a></li>
-      <li class="pub"><span class="t">Association between activities of daily living independence and observational attention ratings in patients with acute stroke.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Honda Y, Sakai K, Tanemura R.</span> <i class="j">Brain Injury</i>: 1–6. <a class="doi" href="https://doi.org/10.1080/02699052.2026.2642252" target="_blank" rel="noopener">doi:10.1080/02699052.2026.2642252</a></li>
-      <li class="pub"><span class="t">Relationship between behavioural observational rating scale of attention function and toileting ability in patients with acute stroke: A cross-sectional study.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Nagao T, Sakai K, Tanemura R.</span> <i class="j">British Journal of Occupational Therapy</i>. <a class="doi" href="https://doi.org/10.1177/03080226251412249" target="_blank" rel="noopener">doi:10.1177/03080226251412249</a></li>
+      <li class="pub"><span class="t">Physical function varies according to characteristics of executive dysfunction in patients with stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, Tanabe J, <span class="me">Miyauchi T</span>.</span> <i>International Journal of Clinical and Health Psychology</i> 26(3): 100725. <a class="doi" href="https://doi.org/10.1016/j.ijchp.2026.100725" target="_blank" rel="noopener">doi:10.1016/j.ijchp.2026.100725</a></li>
+      <li class="pub"><span class="t">Preliminary evaluation of a reduced-item version of the frontal assessment battery in patients with subacute stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, <span class="me">Miyauchi T</span>.</span> <i>Applied Neuropsychology: Adult</i>: 1–6. <a class="doi" href="https://doi.org/10.1080/23279095.2026.2668596" target="_blank" rel="noopener">doi:10.1080/23279095.2026.2668596</a></li>
+      <li class="pub"><span class="t">Association between activities of daily living independence and observational attention ratings in patients with acute stroke.<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Honda Y, Sakai K, Tanemura R.</span> <i>Brain Injury</i>: 1–6. <a class="doi" href="https://doi.org/10.1080/02699052.2026.2642252" target="_blank" rel="noopener">doi:10.1080/02699052.2026.2642252</a></li>
+      <li class="pub"><span class="t">Relationship between behavioural observational rating scale of attention function and toileting ability in patients with acute stroke: A cross-sectional study.<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Nagao T, Sakai K, Tanemura R.</span> <i>British Journal of Occupational Therapy</i>. <a class="doi" href="https://doi.org/10.1177/03080226251412249" target="_blank" rel="noopener">doi:10.1177/03080226251412249</a></li>
     </ol></div>
 
     <div class="year"><span>2025</span><ol>
-      <li class="pub"><span class="t">化学療法を実施した造血器腫瘍患者に対する作業療法は倦怠感の減少に関与するか<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 近藤千雅, 佐野文明, 種村留美.</span> <i class="j">神奈川作業療法研究</i> 15(1): 22–29. <a class="doi" href="https://doi.org/10.57293/kanaotjournal.15.1_22" target="_blank" rel="noopener">doi:10.57293/kanaotjournal.15.1_22</a></li>
-      <li class="pub"><span class="t">Long-term Recovery of Mental Health and Social Participation Following Severe COVID-19 with Occupational Therapy: A Case Report.</span><span class="a">Sasaki S, Yokoyama H, <span class="me">Miyauchi T</span>, Sasaki Y, Abe N, Yamanokuchi K, Sugimura S, Nishizawa M.</span> <i class="j">Asian Journal of Occupational Therapy</i> 21(1): 125–128. <a class="doi" href="https://doi.org/10.11596/asiajot.21.125" target="_blank" rel="noopener">doi:10.11596/asiajot.21.125</a></li>
-      <li class="pub"><span class="t">Poststroke Attention Function: A Rasch Analysis of Neuropsychological Tests.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Nagao T, Tanemura R.</span> <i class="j">Asian Journal of Occupational Therapy</i> 21(1): 117–124. <a class="doi" href="https://doi.org/10.11596/asiajot.21.117" target="_blank" rel="noopener">doi:10.11596/asiajot.21.117</a></li>
-      <li class="pub"><span class="t">Survey on Occupational Therapy and Postgraduate Education in Intensive Care Units in Japan.</span><span class="a">Komaba K, <span class="me">Miyauchi T</span>, Kojima N, Yamashita Y, Suzuki H.</span> <i class="j">Asian Journal of Occupational Therapy</i> 21(1): 94–102. <a class="doi" href="https://doi.org/10.11596/asiajot.21.94" target="_blank" rel="noopener">doi:10.11596/asiajot.21.94</a></li>
-      <li class="pub"><span class="t">Components of frontal assessment battery and clinical features in patients with stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, <span class="me">Miyauchi T</span>.</span> <i class="j">Journal of Rehabilitation Medicine</i> 57: jrm43270. <a class="doi" href="https://doi.org/10.2340/jrm.v57.43270" target="_blank" rel="noopener">doi:10.2340/jrm.v57.43270</a></li>
-      <li class="pub"><span class="t">Assessment tools for attention deficits in patients with stroke: a scoping review across components and recovery phases.</span><span class="a">Sakai K, <span class="me">Miyauchi T</span>, Tanabe J.</span> <i class="j">PeerJ</i> 13: e19163. <a class="doi" href="https://doi.org/10.7717/peerj.19163" target="_blank" rel="noopener">doi:10.7717/peerj.19163</a></li>
+      <li class="pub"><span class="t"><span class="ja">化学療法を実施した造血器腫瘍患者に対する作業療法は倦怠感の減少に関与するか</span><span class="en">Efficacy of Occupational Therapy in Reducing Fatigue in Patients Undergoing Chemotherapy for Hematologic Cancers</span><span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me ja">宮内貴之</span><span class="me en">Miyauchi T</span><span class="ja">, 佐々木祥太郎, 近藤千雅, 佐野文明, 種村留美.</span><span class="en">, Sasaki S, Kondo C, Sano F, Tanemura R.</span></span> <i><span class="ja">神奈川作業療法研究</span><span class="en">Kanagawa Journal of Occupational Therapy Research</span></i> 15(1): 22–29. <a class="doi" href="https://doi.org/10.57293/kanaotjournal.15.1_22" target="_blank" rel="noopener">doi:10.57293/kanaotjournal.15.1_22</a></li>
+      <li class="pub"><span class="t">Long-term Recovery of Mental Health and Social Participation Following Severe COVID-19 with Occupational Therapy: A Case Report.</span><span class="a">Sasaki S, Yokoyama H, <span class="me">Miyauchi T</span>, Sasaki Y, Abe N, Yamanokuchi K, Sugimura S, Nishizawa M.</span> <i>Asian Journal of Occupational Therapy</i> 21(1): 125–128. <a class="doi" href="https://doi.org/10.11596/asiajot.21.125" target="_blank" rel="noopener">doi:10.11596/asiajot.21.125</a></li>
+      <li class="pub"><span class="t">Poststroke Attention Function: A Rasch Analysis of Neuropsychological Tests.<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Nagao T, Tanemura R.</span> <i>Asian Journal of Occupational Therapy</i> 21(1): 117–124. <a class="doi" href="https://doi.org/10.11596/asiajot.21.117" target="_blank" rel="noopener">doi:10.11596/asiajot.21.117</a></li>
+      <li class="pub"><span class="t">Survey on Occupational Therapy and Postgraduate Education in Intensive Care Units in Japan.</span><span class="a">Komaba K, <span class="me">Miyauchi T</span>, Kojima N, Yamashita Y, Suzuki H.</span> <i>Asian Journal of Occupational Therapy</i> 21(1): 94–102. <a class="doi" href="https://doi.org/10.11596/asiajot.21.94" target="_blank" rel="noopener">doi:10.11596/asiajot.21.94</a></li>
+      <li class="pub"><span class="t">Components of frontal assessment battery and clinical features in patients with stroke.</span><span class="a">Sakai K, Hosoi Y, Harada Y, Kato Y, <span class="me">Miyauchi T</span>.</span> <i>Journal of Rehabilitation Medicine</i> 57: jrm43270. <a class="doi" href="https://doi.org/10.2340/jrm.v57.43270" target="_blank" rel="noopener">doi:10.2340/jrm.v57.43270</a></li>
+      <li class="pub"><span class="t">Assessment tools for attention deficits in patients with stroke: a scoping review across components and recovery phases.</span><span class="a">Sakai K, <span class="me">Miyauchi T</span>, Tanabe J.</span> <i>PeerJ</i> 13: e19163. <a class="doi" href="https://doi.org/10.7717/peerj.19163" target="_blank" rel="noopener">doi:10.7717/peerj.19163</a></li>
     </ol></div>
 
     <div class="year"><span>2024</span><ol>
-      <li class="pub"><span class="t">意思決定支援ツールを用いて段階的かつ複合的介入を立案したことでBPSDとADLの改善に繋がった脳血管性認知症の事例<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 根本慎司, 種村留美.</span> <i class="j">神奈川作業療法研究</i> 14(1): 11–17. <a class="doi" href="https://doi.org/10.57293/kanaotjournal.14.1_11" target="_blank" rel="noopener">doi:10.57293/kanaotjournal.14.1_11</a></li>
-      <li class="pub"><span class="t">Behavioral Problems and Self-Feeding Independence Among Patients With Acute Stroke: A Single-Center Study.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Tanemura R.</span> <i class="j">The American Journal of Occupational Therapy</i> 78(5).</li>
-      <li class="pub"><span class="t">急性期くも膜下出血患者の注意機能の行動観察評価と日常生活活動の自立度の推移<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 白濱勲二.</span> <i class="j">作業療法ジャーナル</i> 58(2): 161–166.</li>
+      <li class="pub"><span class="t"><span class="ja">意思決定支援ツールを用いて段階的かつ複合的介入を立案したことでBPSDとADLの改善に繋がった脳血管性認知症の事例</span><span class="en">A case of cerebrovascular dementia in which designing a stepwise complex intervention using decision support tools led to improvement of BPSD and ADL</span><span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me ja">宮内貴之</span><span class="me en">Miyauchi T</span><span class="ja">, 佐々木祥太郎, 佐々木洋子, 根本慎司, 種村留美.</span><span class="en">, Sasaki S, Sasaki Y, Nemoto S, Tanemura R.</span></span> <i><span class="ja">神奈川作業療法研究</span><span class="en">Kanagawa Journal of Occupational Therapy Research</span></i> 14(1): 11–17. <a class="doi" href="https://doi.org/10.57293/kanaotjournal.14.1_11" target="_blank" rel="noopener">doi:10.57293/kanaotjournal.14.1_11</a></li>
+      <li class="pub"><span class="t">Behavioral Problems and Self-Feeding Independence Among Patients With Acute Stroke: A Single-Center Study.<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Tanemura R.</span> <i>The American Journal of Occupational Therapy</i> 78(5).</li>
+      <li class="pub"><span class="t">急性期くも膜下出血患者の注意機能の行動観察評価と日常生活活動の自立度の推移<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 白濱勲二.</span> <i>作業療法ジャーナル</i> 58(2): 161–166.</li>
     </ol></div>
 
     <div class="year"><span>2023</span><ol>
-      <li class="pub"><span class="t">Observational Rating Scale of Attention Function is Associated with Independence in Activities of Daily Living.<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Sasaki Y, Mogamiya T, Tanemura R, Shirahama K.</span> <i class="j">Asian Journal of Occupational Therapy</i> 19(1): 236–242.</li>
-      <li class="pub"><span class="t">多発性硬化症によるUseless hand syndromeに対して感覚再学習を実施した一例</span><span class="a">佐々木洋子, 佐々木祥太郎, <span class="me">宮内貴之</span>.</span> <i class="j">作業療法</i> 42(4): 532–538.</li>
-      <li class="pub"><span class="t">急性期脳損傷患者におけるBox and Block Testと食事動作の自立度の関連<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨.</span> <i class="j">作業療法</i> 42(3): 263–269.</li>
+      <li class="pub"><span class="t">Observational Rating Scale of Attention Function is Associated with Independence in Activities of Daily Living.<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">Miyauchi T</span>, Sasaki S, Sasaki Y, Mogamiya T, Tanemura R, Shirahama K.</span> <i>Asian Journal of Occupational Therapy</i> 19(1): 236–242.</li>
+      <li class="pub"><span class="t">多発性硬化症によるUseless hand syndromeに対して感覚再学習を実施した一例</span><span class="a">佐々木洋子, 佐々木祥太郎, <span class="me">宮内貴之</span>.</span> <i>作業療法</i> 42(4): 532–538.</li>
+      <li class="pub"><span class="t">急性期脳損傷患者におけるBox and Block Testと食事動作の自立度の関連<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨.</span> <i>作業療法</i> 42(3): 263–269.</li>
     </ol></div>
 
     <div class="year"><span>2022</span><ol>
-      <li class="pub"><span class="t">Balint症候群を呈した急性期脳出血患者1例のADLの代償方法<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 榊原陽太郎.</span> <i class="j">作業療法</i> 41(4): 487–493.</li>
+      <li class="pub"><span class="t">Balint症候群を呈した急性期脳出血患者1例のADLの代償方法<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 榊原陽太郎.</span> <i>作業療法</i> 41(4): 487–493.</li>
     </ol></div>
 
     <div class="year"><span>2021</span><ol>
-      <li class="pub"><span class="t">急性期脳卒中患者における注意機能の行動観察評価とADLの関連<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 白濱勲二.</span> <i class="j">高次脳機能研究</i> 41(3).</li>
+      <li class="pub"><span class="t">急性期脳卒中患者における注意機能の行動観察評価とADLの関連<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 白濱勲二.</span> <i>高次脳機能研究</i> 41(3).</li>
     </ol></div>
 
     <div class="year"><span>2019</span><ol>
-      <li class="pub"><span class="t">急性期脳梗塞患者1例における注意機能と日常生活動作能力の推移：行動評価を用いた検討<span class="lead-badge">筆頭</span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 榊原陽太郎.</span> <i class="j">神奈川作業療法研究</i> 9(1).</li>
-      <li class="pub"><span class="t">急性期脳卒中片麻痺患者の日常生活における麻痺側上肢の使用頻度に影響を及ぼす要因 ― 患者特性，身体機能，理解度の観点から ―</span><span class="a">佐々木洋子, 高橋香代子, 佐々木祥太郎, <span class="me">宮内貴之</span>, 榊原陽太郎.</span> <i class="j">作業療法</i> 38(6).</li>
+      <li class="pub"><span class="t">急性期脳梗塞患者1例における注意機能と日常生活動作能力の推移：行動評価を用いた検討<span class="lead-badge"><span class="ja">筆頭</span><span class="en">1st</span></span></span><span class="a"><span class="me">宮内貴之</span>, 佐々木祥太郎, 佐々木洋子, 最上谷拓磨, 榊原陽太郎.</span> <i>神奈川作業療法研究</i> 9(1).</li>
+      <li class="pub"><span class="t">急性期脳卒中片麻痺患者の日常生活における麻痺側上肢の使用頻度に影響を及ぼす要因 ― 患者特性，身体機能，理解度の観点から ―</span><span class="a">佐々木洋子, 高橋香代子, 佐々木祥太郎, <span class="me">宮内貴之</span>, 榊原陽太郎.</span> <i>作業療法</i> 38(6).</li>
     </ol></div>
 
     <details>
-      <summary>著書（分担執筆）</summary>
+      <summary><span class="ja">著書（分担執筆）</span><span class="en">Book chapters</span></summary>
       <ul class="simple">
-        <li>『高次脳機能障害を読み解く：病態と評価から考えるリハビリテーション』医学書院, 2026年（担当：注意障害, COLUMN）</li>
-        <li>『OT臨床ハンドブック ポケット版：聖マリアンナ医科大学病院リハビリテーションセンター』三輪書店, 2021年（担当：脳卒中, ALS）</li>
+        <li><span class="ja">『高次脳機能障害を読み解く：病態と評価から考えるリハビリテーション』医学書院, 2026年（担当：注意障害, COLUMN）</span><span class="en">Understanding Higher Brain Dysfunction: Rehabilitation Based on Pathology and Assessment. Igaku-Shoin, 2026 (chapter: attention deficits; column). In Japanese.</span></li>
+        <li><span class="ja">『OT臨床ハンドブック ポケット版：聖マリアンナ医科大学病院リハビリテーションセンター』三輪書店, 2021年（担当：脳卒中, ALS）</span><span class="en">OT Clinical Handbook, Pocket Edition. Miwa-Shoten, 2021 (chapters: stroke, ALS). In Japanese.</span></li>
       </ul>
     </details>
     <details>
-      <summary>主な招待講演</summary>
+      <summary><span class="ja">主な招待講演</span><span class="en">Selected invited talks</span></summary>
       <ul class="simple">
-        <li>脳血管疾患領域の急性期作業療法 ― 日本作業療法士協会 重点課題研修（2026年12月）</li>
-        <li>脳卒中を脳機構から読み解く専門作業療法士の挑戦 ― 第60回日本作業療法学会 教育セミナー（2026年11月）</li>
-        <li>Cognitive assessment for stroke patients: From the perspective of occupational therapy ― 1st International Symposium on Neuropsychological Rehabilitation（2025年9月）</li>
-        <li>作業療法士のための脳科学的視点から考える高次脳機能障害（シリーズ：失行・失認／無視症候群／注意障害・遂行機能障害／記憶障害）― エポックセミナー（2025〜2026年）</li>
-        <li>急性期で働く作業療法士が高次脳機能障害について知っておきたいこと ― 大阪作業療法ジャーナル 40(1)（2026年, 依頼原稿）</li>
+        <li><span class="ja">脳血管疾患領域の急性期作業療法 ― 日本作業療法士協会 重点課題研修（2026年12月）</span><span class="en">Acute-phase occupational therapy for cerebrovascular disease. Japanese Association of Occupational Therapists training course, Dec 2026.</span></li>
+        <li><span class="ja">脳卒中を脳機構から読み解く専門作業療法士の挑戦 ― 第60回日本作業療法学会 教育セミナー（2026年11月）</span><span class="en">Understanding stroke through brain mechanisms. Educational seminar, 60th Japanese Occupational Therapy Congress, Nov 2026.</span></li>
+        <li>Cognitive assessment for stroke patients: From the perspective of occupational therapy. 1st International Symposium on Neuropsychological Rehabilitation, Sep 2025.</li>
+        <li><span class="ja">作業療法士のための脳科学的視点から考える高次脳機能障害（失行・失認／無視症候群／注意障害・遂行機能障害／記憶障害）― エポックセミナー（2025〜2026年）</span><span class="en">Seminar series on higher brain dysfunction from a neuroscience perspective (apraxia/agnosia, neglect, attention/executive function, memory). Epoch Seminar, 2025–2026.</span></li>
       </ul>
     </details>
     <details>
-      <summary>研究費・受賞</summary>
+      <summary><span class="ja">研究費・受賞</span><span class="en">Grants and awards</span></summary>
       <ul class="simple">
-        <li>科学研究費助成事業 若手研究「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」（2025〜2027年）</li>
-        <li>日本理学療法学会連合 研究助成「脳卒中後の軽微な認知障害を検出する日本語版OCS Plusの信頼性と妥当性の検証」（2026〜2027年, 共同研究者）</li>
-        <li>東京都公立大学法人 一般財源研究費「ワーキングメモリーを評価するN-back課題の開発」（2024〜2025年, 共同研究者）</li>
-        <li>神奈川県作業療法士会 研究助成「本邦の集中治療センターにおける作業療法教育に関する実態調査」（2023〜2025年, 共同研究者）</li>
-        <li>第18回神奈川県作業療法学会 学会長賞（2021年, 共同演者）</li>
+        <li><span class="ja">科研費 若手研究「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」（2025〜2027年, 代表）</span><span class="en">JSPS KAKENHI Early-Career Scientists, 2025–2027 (PI).</span></li>
+        <li><span class="ja">日本理学療法学会連合 研究助成「日本語版OCS Plusの信頼性と妥当性の検証」（2026〜2027年, 分担）</span><span class="en">Japanese Society of Physical Therapy research grant: validation of the Japanese OCS Plus, 2026–2027 (co-investigator).</span></li>
+        <li><span class="ja">東京都公立大学法人 研究費「ワーキングメモリーを評価するN-back課題の開発」（2024〜2025年, 分担）</span><span class="en">Tokyo Metropolitan Public University Corporation grant: developing an N-back task for working memory, 2024–2025 (co-investigator).</span></li>
+        <li><span class="ja">神奈川県作業療法士会 研究助成「集中治療センターにおける作業療法教育に関する実態調査」（2023〜2025年, 分担）</span><span class="en">Kanagawa Association of Occupational Therapists grant: survey of OT education in intensive care, 2023–2025 (co-investigator).</span></li>
+        <li><span class="ja">第18回神奈川県作業療法学会 学会長賞（2021年, 共同演者）</span><span class="en">President's Award, 18th Kanagawa Occupational Therapy Congress, 2021 (co-author).</span></li>
       </ul>
     </details>
-    <p class="more">学会発表などを含む全業績は <a href="https://researchmap.jp/tkyk-miyauchi" target="_blank" rel="noopener">researchmap</a> をご覧ください。</p>
+    <p class="more"><span class="ja">学会発表などを含む全業績は <a href="https://researchmap.jp/tkyk-miyauchi" target="_blank" rel="noopener">researchmap</a> をご覧ください。</span><span class="en">For a complete list including conference presentations, see <a href="https://researchmap.jp/tkyk-miyauchi?lang=en" target="_blank" rel="noopener">researchmap</a>.</span></p>
   </section>
 
-  <section class="wrap" id="collaborate" aria-labelledby="collab-h">
-    <div class="collab">
-      <p class="eyebrow">Call for collaborators</p>
-      <h2 id="collab-h">共同研究者を募集しています</h2>
-      <p>臨床の「気になる」を、一緒に研究のかたちにしませんか。所属や職種、経験年数は問いません。</p>
+  <section class="collab-band" id="collaborate" aria-labelledby="collab-h">
+    <div class="wrap narrow collab">
+      <div>
+        <p class="kicker">Call for collaborators</p>
+        <h2 id="collab-h"><span class="ja">共同研究者を<br>募集しています</span><span class="en">Let's work together</span></h2>
+        <p class="ja">臨床の「気になる」を、一緒に研究のかたちにしませんか。所属や職種、経験年数は問いません。</p>
+        <p class="en">Have a clinical question you'd like to turn into research? I welcome collaborators from any institution, profession or career stage.</p>
+        <div class="contact">
+          <code id="mail">takayuki.miyauchi@sums.ac.jp</code>
+          <button type="button" id="copy"><span class="ja">メールアドレスをコピー</span><span class="en">Copy email</span></button>
+        </div>
+      </div>
       <ul>
-        <li>急性期・回復期の病院で、脳卒中や高次脳機能障害のリハビリに携わっている方（多施設でのデータ収集など）</li>
-        <li>注意障害・遂行機能障害などの評価法の開発や検証に関心のある研究者の方</li>
-        <li>研究を始めてみたい臨床の作業療法士・リハビリ職の方</li>
-        <li>作業療法や脳の研究に興味がある学生の方（高校生の進路相談も歓迎します）</li>
+        <li><span class="ja">急性期・回復期の病院で、脳卒中や高次脳機能障害のリハビリに携わっている方（多施設でのデータ収集など）</span><span class="en">Clinicians working in acute or subacute stroke rehabilitation (e.g., multi-site data collection)</span></li>
+        <li><span class="ja">注意障害・遂行機能障害などの評価法の開発や検証に関心のある研究者の方</span><span class="en">Researchers interested in developing or validating assessments of attention and executive function</span></li>
+        <li><span class="ja">研究を始めてみたい臨床の作業療法士・リハビリ職の方</span><span class="en">Therapists who want to start doing research</span></li>
+        <li><span class="ja">作業療法や脳の研究に興味がある学生の方（高校生の進路相談も歓迎します）</span><span class="en">Students curious about occupational therapy or brain science, including high school students</span></li>
       </ul>
-      <div class="contact">
-        <span>ご連絡はメールで：</span>
-        <code id="mail">takayuki.miyauchi@sums.ac.jp</code>
-        <button type="button" id="copy">コピー</button>
-      </div>
     </div>
   </section>
 
-  <section class="wrap" id="profile" aria-labelledby="profile-h">
-    <h2 id="profile-h">プロフィール</h2>
-    <p class="sec-sub">急性期病院で約10年間、作業療法士として脳卒中などの患者さんのリハビリを担当したのち、大学教員として教育と研究に取り組んでいます。</p>
-    <div class="cols">
+  <section class="wrap narrow" id="profile" aria-labelledby="profile-h">
+    <p class="kicker">Profile</p>
+    <h2 id="profile-h"><span class="ja">プロフィール</span><span class="en">Profile</span></h2>
+    <div class="prof">
+      <div class="photo lg"><img src="photo.jpg" alt="宮内貴之 / Takayuki Miyauchi" onerror="this.remove()"><span class="ph" aria-hidden="true">TM</span></div>
       <div>
-        <h3>経歴</h3>
-        <dl>
-          <dt>2024–</dt><dd>湘南医療大学 保健医療学部 作業療法学専攻 助教</dd>
-          <dt>2015–2024</dt><dd>聖マリアンナ医科大学横浜市西部病院 リハビリテーション部 作業療法士</dd>
-          <dt>2013–2015</dt><dd>新横浜リハビリテーション病院 作業療法士</dd>
-        </dl>
+        <p class="sec-sub" style="margin-bottom:24px"><span class="ja">急性期病院で約10年間、作業療法士として脳卒中などの患者さんのリハビリを担当したのち、大学教員として教育と研究に取り組んでいます。</span><span class="en">After about ten years as an occupational therapist in acute-care hospitals, working mainly with stroke patients, I now teach and do research at a university.</span></p>
+        <div class="cols">
+          <div>
+            <h3><span class="ja">経歴</span><span class="en">Career</span></h3>
+            <dl>
+              <dt>2024–</dt><dd><span class="ja">湘南医療大学 保健医療学部 作業療法学専攻 助教</span><span class="en">Assistant Professor, Shonan University of Medical Sciences</span></dd>
+              <dt>2015–2024</dt><dd><span class="ja">聖マリアンナ医科大学横浜市西部病院 作業療法士</span><span class="en">Occupational Therapist, St. Marianna University Yokohama City Seibu Hospital</span></dd>
+              <dt>2013–2015</dt><dd><span class="ja">新横浜リハビリテーション病院 作業療法士</span><span class="en">Occupational Therapist, Shin-Yokohama Rehabilitation Hospital</span></dd>
+            </dl>
+          </div>
+          <div>
+            <h3><span class="ja">学歴・学位</span><span class="en">Education</span></h3>
+            <dl>
+              <dt>2025</dt><dd><span class="ja">神戸大学大学院 保健学研究科 博士（保健学）</span><span class="en">PhD in Health Sciences, Kobe University</span></dd>
+              <dt>2021</dt><dd><span class="ja">神奈川県立保健福祉大学大学院 修士（リハビリテーション学）</span><span class="en">Master of Rehabilitation, Kanagawa University of Human Services</span></dd>
+              <dt>2013</dt><dd><span class="ja">帝京平成大学 地域医療学部 作業療法学科 卒業</span><span class="en">BS, Occupational Therapy, Teikyo Heisei University</span></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="links">
+          <a href="https://researchmap.jp/tkyk-miyauchi" target="_blank" rel="noopener">researchmap ↗</a>
+          <a href="https://orcid.org/0000-0001-6903-9382" target="_blank" rel="noopener">ORCID ↗</a>
+        </div>
       </div>
-      <div>
-        <h3>学歴・学位</h3>
-        <dl>
-          <dt>2025</dt><dd>神戸大学大学院 保健学研究科 博士（保健学）</dd>
-          <dt>2021</dt><dd>神奈川県立保健福祉大学大学院 修士（リハビリテーション学）</dd>
-          <dt>2013</dt><dd>帝京平成大学 地域医療学部 作業療法学科 卒業</dd>
-        </dl>
-      </div>
-    </div>
-    <div class="links">
-      <a href="https://researchmap.jp/tkyk-miyauchi" target="_blank" rel="noopener">researchmap</a>
-      <a href="https://orcid.org/0000-0001-6903-9382" target="_blank" rel="noopener">ORCID</a>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">© 宮内 貴之 ／ 最終更新 2026年11月</div>
+  <div class="wrap narrow">© Takayuki Miyauchi · <span class="ja">最終更新 2026年11月</span><span class="en">Updated November 2026</span></div>
 </footer>
 
 <script>
-document.getElementById('copy').addEventListener('click', function(){
-  var b=this, t=document.getElementById('mail').textContent;
-  function done(){ b.textContent='コピーしました'; setTimeout(function(){ b.textContent='コピー'; },1800); }
-  function fallback(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s=window.getSelection(); s.removeAllRanges(); s.addRange(r); }
-  try { navigator.clipboard.writeText(t).then(done, fallback); } catch(e){ fallback(); }
-});
+(function(){
+  /* language toggle */
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l); root.lang=l;
+    document.getElementById('btn-ja').setAttribute('aria-pressed',String(l==='ja'));
+    document.getElementById('btn-en').setAttribute('aria-pressed',String(l==='en'));
+    document.title = l==='en' ? 'Takayuki Miyauchi | Research' : '宮内貴之 研究紹介';
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+  setLang(saved==='en'||saved==='ja'?saved:'ja');
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-set'))})});
+
+  /* copy email */
+  document.getElementById('copy').addEventListener('click',function(){
+    var b=this,t=document.getElementById('mail').textContent,orig=b.innerHTML;
+    function done(){b.textContent=root.getAttribute('data-lang')==='en'?'Copied':'コピーしました';setTimeout(function(){b.innerHTML=orig},1800)}
+    function fb(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(t).then(done,fb)}catch(e){fb()}
+  });
+
+  /* hero: signals travelling between brain regions + drifting light particles over the image */
+  var bg=document.querySelector('.hero-bg'),cv=document.getElementById('fx'),ctx=cv.getContext('2d');
+  var IW=1671,IH=941; /* source image size; regions below in image fractions */
+  var R={fr:[.60,.44],pm:[.69,.36],pa:[.79,.37],oc:[.90,.56],te:[.74,.70],ce:[.82,.79],fb:[.59,.62]};
+  var routes=[['fr','pa'],['fr','te'],['pa','oc'],['pm','te'],['fb','pa'],['fr','pm'],['te','oc'],['pa','ce']];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dpr=1,W=0,H=0,map=null,parts=[];
+  function cover(){
+    var cs=getComputedStyle(bg),px=parseFloat(cs.backgroundPositionX)/100; if(isNaN(px))px=1;
+    var s=Math.max(W/IW,H/IH),ox=(W-IW*s)*px,oy=(H-IH*s)/2;
+    return function(f){return [ox+f[0]*IW*s,oy+f[1]*IH*s]};
+  }
+  function size(){
+    var r=bg.getBoundingClientRect();dpr=Math.min(2,window.devicePixelRatio||1);W=r.width;H=r.height;
+    cv.width=Math.max(1,W*dpr);cv.height=Math.max(1,H*dpr);map=cover();
+    parts=[];for(var i=0;i<Math.round(W/22);i++)parts.push({x:Math.random()*W,y:Math.random()*H,v:.15+Math.random()*.35,r:.6+Math.random()*1.6,p:Math.random()*6.28});
+  }
+  function glow(x,y,r,a){var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,'rgba(200,240,255,'+a+')');g.addColorStop(.35,'rgba(90,190,255,'+a*.5+')');g.addColorStop(1,'rgba(40,120,255,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.28);ctx.fill()}
+  function draw(t){
+    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+    var k=Math.max(W/IW,H/IH)*IW/1671;
+    /* drifting particles */
+    parts.forEach(function(p){
+      if(!reduce){p.y-=p.v;p.x+=Math.sin(t/2000+p.p)*.15;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}}
+      var a=.25+.35*Math.sin(t/700+p.p*3);ctx.fillStyle='rgba(150,215,255,'+Math.max(.05,a)+')';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);ctx.fill();
+    });
+    /* region nodes */
+    Object.keys(R).forEach(function(key,i){var q=map(R[key]);glow(q[0],q[1],14*k,.35+.25*Math.sin(t/800+i))});
+    /* signals along arcs */
+    routes.forEach(function(rt,i){
+      var a=map(R[rt[0]]),b=map(R[rt[1]]),mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2-60*k;
+      ctx.strokeStyle='rgba(140,210,255,.18)';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.quadraticCurveTo(mx,my,b[0],b[1]);ctx.stroke();
+      var ph=reduce?.5:((t/3200)+i*.37)%1;
+      for(var j=0;j<6;j++){var p=Math.max(0,ph-j*.025),u=1-p;
+        var x=u*u*a[0]+2*u*p*mx+p*p*b[0],y=u*u*a[1]+2*u*p*my+p*p*b[1];
+        glow(x,y,(j?6:12)*k,(j?.5-j*.08:1)*Math.sin(Math.PI*ph))}
+    });
+  }
+  function loop(t){draw(t);if(!reduce)requestAnimationFrame(loop)}
+  size();window.addEventListener('resize',function(){size();if(reduce)draw(0)});
+  if(reduce)draw(0);else requestAnimationFrame(loop);
+})();
 </script>
 </body>
 </html>
