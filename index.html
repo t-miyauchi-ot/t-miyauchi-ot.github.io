@@ -135,6 +135,16 @@ summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size
 .simple{margin:0 0 14px;padding-left:1.2em;display:grid;gap:10px;font-size:14.5px}
 .more{margin-top:24px;font-size:14px}
 
+/* activity reports (news) */
+.news{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.news li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+.news time{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.7}
+.news .cat{display:inline-block;font-size:11.5px;line-height:1.8;border-radius:999px;padding:0 10px;margin-right:8px;background:var(--accent-soft);color:var(--accent);vertical-align:1px;white-space:nowrap}
+.news .cat.talk{background:color-mix(in srgb,var(--spark) 14%,transparent);color:var(--spark)}
+.news h3{display:inline;font-size:15.5px;margin:0}
+.news p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
+@media (max-width:560px){.news li{grid-template-columns:1fr;padding:16px 18px}}
+
 .collab-band{background:var(--hero);color:var(--hero-ink)}
 .collab-band .kicker{color:var(--spark)}
 .collab{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 48px;align-items:start}
@@ -177,6 +187,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
     <div class="nav-r">
       <ul>
         <li><a href="#research"><span class="ja">研究内容</span><span class="en">Research</span></a></li>
+        <li><a href="#news"><span class="ja">活動報告</span><span class="en">News</span></a></li>
         <li><a href="#publications"><span class="ja">業績</span><span class="en">Publications</span></a></li>
         <li><a href="#collaborate"><span class="ja">共同研究者募集</span><span class="en">Collaborate</span></a></li>
         <li><a href="#profile"><span class="ja">プロフィール</span><span class="en">Profile</span></a></li>
@@ -269,6 +280,51 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       <div class="ja">日本学術振興会 科学研究費助成事業 若手研究（2025〜2027年度, 研究代表者）<br>「脳卒中後の注意障害に対する客観的評価法の再考 ― 行動観察評価の有用性 ―」</div>
       <div class="en">JSPS Grant-in-Aid for Early-Career Scientists (2025–2027, Principal Investigator)<br>"Rethinking objective assessment of post-stroke attention deficits: the value of observational rating"</div>
     </div>
+  </section>
+
+  <section class="wrap narrow" id="news" aria-labelledby="news-h">
+    <p class="kicker">News</p>
+    <h2 id="news-h"><span class="ja">活動報告</span><span class="en">News</span></h2>
+    <p class="sec-sub"><span class="ja">講演や学会発表、論文の掲載など、最近の活動をお知らせします。</span><span class="en">Recent talks, presentations, publications and other updates.</span></p>
+    <!--
+      活動報告の追加方法：下の <ol class="news"> の一番上に、次の形の <li> を1つコピーして書き換えてください（新しいものが上）。
+      分類の例：講演・学会発表（class="cat talk"でオレンジ色）／論文／研究費／お知らせ
+      <li>
+        <time datetime="2026-12">2026.12</time>
+        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">タイトル</span><span class="en">Title</span></h3>
+          <p><span class="ja">ひとこと説明</span><span class="en">Short description</span></p></div>
+      </li>
+    -->
+    <ol class="news">
+      <li>
+        <time datetime="2026">2026</time>
+        <div><span class="cat"><span class="ja">論文</span><span class="en">Paper</span></span><h3><span class="ja">急性期脳卒中の方の「注意」と日常生活の自立度に関する論文が <i>Brain Injury</i> に掲載されました</span><span class="en">Paper on attention and ADL independence after acute stroke published in <i>Brain Injury</i></span></h3>
+          <p><span class="ja">行動観察による注意の評価が、日常生活の自立度とどう関係するかを調べた研究です（筆頭著者）。</span><span class="en">We examined how observational ratings of attention relate to independence in daily activities (first author).</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026">2026</time>
+        <div><span class="cat"><span class="ja">論文</span><span class="en">Paper</span></span><h3><span class="ja">注意機能とトイレ動作の関係についての論文が <i>British Journal of Occupational Therapy</i> に掲載されました</span><span class="en">Paper on attention and toileting published in the <i>British Journal of Occupational Therapy</i></span></h3>
+          <p><span class="ja">急性期脳卒中の方を対象に、注意の働きとトイレ動作の自立との関係を調べました（筆頭著者）。</span><span class="en">A cross-sectional study of attention and toileting ability in acute stroke (first author).</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026">2026</time>
+        <div><span class="cat"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">日本理学療法学会連合の研究助成に採択されました（分担）</span><span class="en">Joined a Japanese Society of Physical Therapy funded project (co-investigator)</span></h3>
+          <p><span class="ja">脳卒中後の認知機能を調べる検査「日本語版OCS Plus」の信頼性と妥当性を確かめる研究です。</span><span class="en">Validating the Japanese version of the OCS Plus cognitive screen.</span></p></div>
+      </li>
+      <li>
+        <time datetime="2025">2025</time>
+        <div><span class="cat"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">科研費（若手研究）に採択されました</span><span class="en">Awarded a JSPS KAKENHI Grant for Early-Career Scientists</span></h3>
+          <p><span class="ja">脳卒中後の注意障害を、日常の様子の観察から評価する方法を見直す研究です（2025〜2027年, 代表）。</span><span class="en">Rethinking how attention deficits after stroke are assessed through observation (2025–2027, PI).</span></p></div>
+      </li>
+      <li>
+        <time datetime="2025">2025</time>
+        <div><span class="cat"><span class="ja">お知らせ</span><span class="en">Update</span></span><h3><span class="ja">神戸大学大学院で博士（保健学）を取得しました</span><span class="en">Received a PhD in Health Sciences from Kobe University</span></h3></div>
+      </li>
+      <li>
+        <time datetime="2024">2024</time>
+        <div><span class="cat"><span class="ja">お知らせ</span><span class="en">Update</span></span><h3><span class="ja">湘南医療大学 作業療法学専攻の助教に着任しました</span><span class="en">Joined Shonan University of Medical Sciences as Assistant Professor</span></h3></div>
+      </li>
+    </ol>
   </section>
 
   <section class="wrap narrow" id="publications" aria-labelledby="pub-h">
