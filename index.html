@@ -141,6 +141,9 @@ summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size
 .news time{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.7}
 .news .cat{display:inline-block;font-size:11.5px;line-height:1.8;border-radius:999px;padding:0 10px;margin-right:8px;background:var(--accent-soft);color:var(--accent);vertical-align:1px;white-space:nowrap}
 .news .cat.talk{background:color-mix(in srgb,var(--spark) 14%,transparent);color:var(--spark)}
+.news .cat.paper{background:color-mix(in srgb,#1f9d6b 14%,transparent);color:#17865a}
+:root[data-theme="dark"] .news .cat.paper{color:#5fd3a0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .news .cat.paper{color:#5fd3a0}}
 .news .cat.fund{background:transparent;border:1px solid var(--line);color:var(--muted)}
 .news time{font-size:14px}
 #news details .news{margin:6px 0 14px}
@@ -289,10 +292,10 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
   <section class="wrap narrow" id="news" aria-labelledby="news-h">
     <p class="kicker">News</p>
     <h2 id="news-h"><span class="ja">活動報告</span><span class="en">News</span></h2>
-    <p class="sec-sub"><span class="ja">講演や学会発表、研究費の採択など、最近の活動をお知らせします。</span><span class="en">Recent talks, conference presentations and research grants.</span></p>
+    <p class="sec-sub"><span class="ja">論文の発表や講演、学会発表、研究費の採択など、最近の活動をお知らせします。</span><span class="en">Recent papers, talks, conference presentations and research grants.</span></p>
     <!--
       活動報告の追加方法：下の <ol class="news"> の一番上に、次の <li> をコピーして書き換えてください（新しいものが上）。
-      分類：講演 = class="cat talk"（オレンジ）／学会発表 = class="cat"（青）／研究費 = class="cat fund"（灰）
+      分類：講演 = class="cat talk"（オレンジ）／学会発表 = class="cat"（青）／論文 = class="cat paper"（緑）／研究費 = class="cat fund"（灰）
       <li>
         <time datetime="2027-01-20">2027.01.20</time>
         <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">タイトル</span><span class="en">Title</span></h3>
@@ -322,18 +325,38 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       </li>
       <li>
         <time datetime="2026-09-05">2026.09.05</time>
-        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">日本語版 Oxford Cognitive Screen の信頼性と妥当性の検討</span><span class="en">A reliability and validity study of the Japanese version of the Oxford Cognitive Screen</span></h3>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3>A reliability and validity study of the Japanese version of the Oxford Cognitive Screen</h3>
           <p><span class="ja">第24回日本神経理学療法学会学術大会（共同演者）</span><span class="en">24th Annual Meeting of the Japanese Society of Neurological Physical Therapy (co-author)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-09">2026.09</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Physical function varies according to characteristics of executive dysfunction in patients with stroke</h3>
+          <p><i>International Journal of Clinical and Health Psychology</i>（<span class="ja">共著</span><span class="en">co-author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2026-07">2025.09–2026.07</time>
+        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">連続講座「作業療法士のための脳科学的視点から考える高次脳機能障害」</span><span class="en">Lecture series: higher brain dysfunction from a neuroscience perspective, for occupational therapists</span></h3>
+          <p><span class="ja">エポックセミナー（招待講演・全8回）。失行・失認、無視症候群、注意障害・遂行機能障害、記憶障害の4テーマを2周にわたり担当しました。</span><span class="en">Epoch Seminar (invited, 8 sessions): apraxia and agnosia, neglect, attention and executive dysfunction, and memory disorders, each given twice.</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-05-06">2026.05.06</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Preliminary evaluation of a reduced-item version of the frontal assessment battery in patients with subacute stroke</h3>
+          <p><i>Applied Neuropsychology: Adult</i>（<span class="ja">共著</span><span class="en">co-author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2026-03-11">2026.03.11</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Association between activities of daily living independence and observational attention ratings in patients with acute stroke</h3>
+          <p><i>Brain Injury</i>（<span class="ja">筆頭著者</span><span class="en">first author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2026-01">2026.01</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Relationship between behavioural observational rating scale of attention function and toileting ability in patients with acute stroke: A cross-sectional study</h3>
+          <p><i>British Journal of Occupational Therapy</i>（<span class="ja">筆頭著者</span><span class="en">first author</span>）</p></div>
       </li>
       <li>
         <time datetime="2026">2026</time>
         <div><span class="cat fund"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">日本理学療法学会連合 研究助成に採択（分担）</span><span class="en">Japanese Society of Physical Therapy research grant (co-investigator)</span></h3>
           <p><span class="ja">脳卒中後の認知機能を調べる検査「日本語版OCS Plus」の信頼性と妥当性を確かめる研究です（2026〜2027年）。</span><span class="en">Validating the Japanese version of the OCS Plus cognitive screen (2026–2027).</span></p></div>
-      </li>
-      <li>
-        <time datetime="2025-09">2025.09–2026.07</time>
-        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">連続講座「作業療法士のための脳科学的視点から考える高次脳機能障害」</span><span class="en">Lecture series: higher brain dysfunction from a neuroscience perspective, for occupational therapists</span></h3>
-          <p><span class="ja">エポックセミナー（招待講演・全8回）。失行・失認、無視症候群、注意障害・遂行機能障害、記憶障害の4テーマを2周にわたり担当しました。</span><span class="en">Epoch Seminar (invited, 8 sessions): apraxia and agnosia, neglect, attention and executive dysfunction, and memory disorders, each given twice.</span></p></div>
       </li>
     </ol>
     <details>
@@ -351,8 +374,38 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
       </li>
       <li>
         <time datetime="2025-09-14">2025.09.14</time>
-        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">脳卒中の方向けの Frontal Assessment Battery 短縮版の開発</span><span class="en">Development of the short version of the Frontal Assessment Battery for stroke</span></h3>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3>Development of the short version of Frontal Assessment Battery for Stroke population</h3>
           <p><span class="ja">The Asia-Pacific Stroke Conference 2025（共同演者）</span><span class="en">The Asia-Pacific Stroke Conference 2025 (co-author)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2025-09">2025.09</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3><span class="ja">化学療法を実施した造血器腫瘍患者に対する作業療法は倦怠感の減少に関与するか</span><span class="en">Efficacy of Occupational Therapy in Reducing Fatigue in Patients Undergoing Chemotherapy for Hematologic Cancers</span></h3>
+          <p><i><span class="ja">神奈川作業療法研究</span><span class="en">Kanagawa Journal of Occupational Therapy Research</span></i>（<span class="ja">筆頭著者</span><span class="en">first author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2025-09">2025.09</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Long-term Recovery of Mental Health and Social Participation Following Severe COVID-19 with Occupational Therapy: A Case Report</h3>
+          <p><i>Asian Journal of Occupational Therapy</i>（<span class="ja">共著</span><span class="en">co-author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2025-08">2025.08</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Poststroke Attention Function: A Rasch Analysis of Neuropsychological Tests</h3>
+          <p><i>Asian Journal of Occupational Therapy</i>（<span class="ja">筆頭著者</span><span class="en">first author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2025-07">2025.07</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Survey on Occupational Therapy and Postgraduate Education in Intensive Care Units in Japan</h3>
+          <p><i>Asian Journal of Occupational Therapy</i>（<span class="ja">共著</span><span class="en">co-author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2025-06-25">2025.06.25</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Components of frontal assessment battery and clinical features in patients with stroke</h3>
+          <p><i>Journal of Rehabilitation Medicine</i>（<span class="ja">共著</span><span class="en">co-author</span>）</p></div>
+      </li>
+      <li>
+        <time datetime="2025-03-27">2025.03.27</time>
+        <div><span class="cat paper"><span class="ja">論文</span><span class="en">Paper</span></span><h3>Assessment tools for attention deficits in patients with stroke: a scoping review across components and recovery phases</h3>
+          <p><i>PeerJ</i>（<span class="ja">共著</span><span class="en">co-author</span>）</p></div>
       </li>
       <li>
         <time datetime="2025">2025</time>
