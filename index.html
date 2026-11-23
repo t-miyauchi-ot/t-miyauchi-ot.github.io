@@ -137,10 +137,15 @@ summary{cursor:pointer;font-family:var(--font-display);font-weight:700;font-size
 
 /* activity reports (news) */
 .news{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.news li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+.news li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:4px 18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
 .news time{font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.7}
 .news .cat{display:inline-block;font-size:11.5px;line-height:1.8;border-radius:999px;padding:0 10px;margin-right:8px;background:var(--accent-soft);color:var(--accent);vertical-align:1px;white-space:nowrap}
 .news .cat.talk{background:color-mix(in srgb,var(--spark) 14%,transparent);color:var(--spark)}
+.news .cat.fund{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.news .soon{display:inline-block;font-size:11.5px;line-height:1.7;border:1px solid var(--spark);color:var(--spark);border-radius:4px;padding:0 6px;margin-right:8px;vertical-align:1px;white-space:nowrap}
+.news time{font-size:14px}
+#news details .news{margin:6px 0 14px}
+#news details .news li{border:0;border-top:1px solid var(--line);border-radius:0;padding:14px 0;background:transparent}
 .news h3{display:inline;font-size:15.5px;margin:0}
 .news p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
 @media (max-width:560px){.news li{grid-template-columns:1fr;padding:16px 18px}}
@@ -285,46 +290,100 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:13px;color:
   <section class="wrap narrow" id="news" aria-labelledby="news-h">
     <p class="kicker">News</p>
     <h2 id="news-h"><span class="ja">活動報告</span><span class="en">News</span></h2>
-    <p class="sec-sub"><span class="ja">講演や学会発表、論文の掲載など、最近の活動をお知らせします。</span><span class="en">Recent talks, presentations, publications and other updates.</span></p>
+    <p class="sec-sub"><span class="ja">講演や学会発表、研究費の採択など、最近の活動をお知らせします。</span><span class="en">Recent talks, conference presentations and research grants.</span></p>
     <!--
-      活動報告の追加方法：下の <ol class="news"> の一番上に、次の形の <li> を1つコピーして書き換えてください（新しいものが上）。
-      分類の例：講演・学会発表（class="cat talk"でオレンジ色）／論文／研究費／お知らせ
+      活動報告の追加方法：下の <ol class="news"> の一番上に、次の <li> をコピーして書き換えてください（新しいものが上）。
+      分類：講演 = class="cat talk"（オレンジ）／学会発表 = class="cat"（青）／研究費 = class="cat fund"（灰）
+      これから行う予定のものは <span class="soon">…</span> を付けると「予定」と表示されます。
       <li>
-        <time datetime="2026-12">2026.12</time>
+        <time datetime="2027-01-20">2027.01.20</time>
         <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">タイトル</span><span class="en">Title</span></h3>
-          <p><span class="ja">ひとこと説明</span><span class="en">Short description</span></p></div>
+          <p><span class="ja">会の名前など</span><span class="en">Event name</span></p></div>
       </li>
     -->
     <ol class="news">
       <li>
-        <time datetime="2026">2026</time>
-        <div><span class="cat"><span class="ja">論文</span><span class="en">Paper</span></span><h3><span class="ja">急性期脳卒中の方の「注意」と日常生活の自立度に関する論文が <i>Brain Injury</i> に掲載されました</span><span class="en">Paper on attention and ADL independence after acute stroke published in <i>Brain Injury</i></span></h3>
-          <p><span class="ja">行動観察による注意の評価が、日常生活の自立度とどう関係するかを調べた研究です（筆頭著者）。</span><span class="en">We examined how observational ratings of attention relate to independence in daily activities (first author).</span></p></div>
+        <time datetime="2026-12-12">2026.12.12</time>
+        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span> <span class="soon"><span class="ja">予定</span><span class="en">Upcoming</span></span><h3><span class="ja">脳血管疾患領域の急性期作業療法</span><span class="en">Acute-phase occupational therapy for cerebrovascular disease</span></h3>
+          <p><span class="ja">日本作業療法士協会「重点課題研修」身体障害領域の急性期作業療法研修会（招待講演）</span><span class="en">Japanese Association of Occupational Therapists training course on acute-phase OT (invited)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-11-26">2026.11.26</time>
+        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span> <span class="soon"><span class="ja">予定</span><span class="en">Upcoming</span></span><h3><span class="ja">脳画像の見方と脳の各部位が担う高次脳機能</span><span class="en">Reading brain images: which parts of the brain do what</span></h3>
+          <p><span class="ja">エポックセミナー（招待講演）</span><span class="en">Epoch Seminar (invited)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-11-21">2026.11.21</time>
+        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">脳卒中を脳機構から読み解く専門作業療法士の挑戦</span><span class="en">Understanding stroke through brain mechanisms: the work of a specialist OT</span></h3>
+          <p><span class="ja">第60回日本作業療法学会 教育セミナー（招待講演）</span><span class="en">Educational seminar, 60th Japanese Occupational Therapy Congress (invited)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-11-15">2026.11.15</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">造血器腫瘍患者におけるリハビリテーションによる身体機能の変化および費用対効用</span><span class="en">Changes in physical function and cost-utility of rehabilitation in patients with hematologic cancers</span></h3>
+          <p><span class="ja">第9回日本理学療法管理学会学術大会（共同演者）</span><span class="en">9th Annual Meeting of the Japanese Society of Physical Therapy Management (co-author)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-11-05">2026.11.05</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">地域高齢者のテクノロジー使用に基づく高次生活機能指標の開発</span><span class="en">Developing an index of higher-level daily functioning based on technology use in community-dwelling older adults</span></h3>
+          <p><span class="ja">第50回日本高次脳機能学会学術総会（共同演者）</span><span class="en">50th Annual Meeting of the Japan Society for Higher Brain Dysfunction (co-author)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-09-13">2026.09.13</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">脳卒中患者の運動イメージ能力が変調する遂行機能の分岐点</span><span class="en">Executive-function thresholds at which motor imagery ability changes in stroke patients</span></h3>
+          <p><span class="ja">第45回東京都理学療法学術大会（共同演者）</span><span class="en">45th Tokyo Physical Therapy Congress (co-author)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2026-09-05">2026.09.05</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">日本語版 Oxford Cognitive Screen の信頼性と妥当性の検討</span><span class="en">A reliability and validity study of the Japanese version of the Oxford Cognitive Screen</span></h3>
+          <p><span class="ja">第24回日本神経理学療法学会学術大会（共同演者）</span><span class="en">24th Annual Meeting of the Japanese Society of Neurological Physical Therapy (co-author)</span></p></div>
       </li>
       <li>
         <time datetime="2026">2026</time>
-        <div><span class="cat"><span class="ja">論文</span><span class="en">Paper</span></span><h3><span class="ja">注意機能とトイレ動作の関係についての論文が <i>British Journal of Occupational Therapy</i> に掲載されました</span><span class="en">Paper on attention and toileting published in the <i>British Journal of Occupational Therapy</i></span></h3>
-          <p><span class="ja">急性期脳卒中の方を対象に、注意の働きとトイレ動作の自立との関係を調べました（筆頭著者）。</span><span class="en">A cross-sectional study of attention and toileting ability in acute stroke (first author).</span></p></div>
+        <div><span class="cat fund"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">日本理学療法学会連合 研究助成に採択（分担）</span><span class="en">Japanese Society of Physical Therapy research grant (co-investigator)</span></h3>
+          <p><span class="ja">脳卒中後の認知機能を調べる検査「日本語版OCS Plus」の信頼性と妥当性を確かめる研究です（2026〜2027年）。</span><span class="en">Validating the Japanese version of the OCS Plus cognitive screen (2026–2027).</span></p></div>
       </li>
       <li>
-        <time datetime="2026">2026</time>
-        <div><span class="cat"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">日本理学療法学会連合の研究助成に採択されました（分担）</span><span class="en">Joined a Japanese Society of Physical Therapy funded project (co-investigator)</span></h3>
-          <p><span class="ja">脳卒中後の認知機能を調べる検査「日本語版OCS Plus」の信頼性と妥当性を確かめる研究です。</span><span class="en">Validating the Japanese version of the OCS Plus cognitive screen.</span></p></div>
+        <time datetime="2025-09">2025.09–2026.07</time>
+        <div><span class="cat talk"><span class="ja">講演</span><span class="en">Talk</span></span><h3><span class="ja">連続講座「作業療法士のための脳科学的視点から考える高次脳機能障害」</span><span class="en">Lecture series: higher brain dysfunction from a neuroscience perspective, for occupational therapists</span></h3>
+          <p><span class="ja">エポックセミナー（招待講演・全8回）。失行・失認、無視症候群、注意障害・遂行機能障害、記憶障害の4テーマを2周にわたり担当しました。</span><span class="en">Epoch Seminar (invited, 8 sessions): apraxia and agnosia, neglect, attention and executive dysfunction, and memory disorders, each given twice.</span></p></div>
+      </li>
+    </ol>
+    <details>
+      <summary><span class="ja">それ以前の活動</span><span class="en">Earlier</span></summary>
+      <ol class="news">
+      <li>
+        <time datetime="2025-11-14">2025.11.14</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">第49回日本高次脳機能学会学術総会で3題を発表</span><span class="en">Three presentations at the 49th Annual Meeting of the Japan Society for Higher Brain Dysfunction</span></h3>
+          <p><span class="ja">注意の評価に関するスコーピングレビュー、Frontal Assessment Battery と遂行機能障害のタイプ、高次脳機能障害者支援の歩みについて（いずれも共同演者）。</span><span class="en">On assessing attention (scoping review), the Frontal Assessment Battery and subtypes of executive dysfunction, and the history of support for people with brain injury (co-author).</span></p></div>
+      </li>
+      <li>
+        <time datetime="2025-10-04">2025.10.04</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">種類の異なるN-back課題による反応時間と正答率の差異</span><span class="en">Differences in reaction time and accuracy across types of N-back tasks</span></h3>
+          <p><span class="ja">第35回認知リハビリテーション研究会（共同演者）</span><span class="en">35th Meeting of the Japanese Society of Cognitive Rehabilitation (co-author)</span></p></div>
+      </li>
+      <li>
+        <time datetime="2025-09-14">2025.09.14</time>
+        <div><span class="cat "><span class="ja">学会発表</span><span class="en">Presentation</span></span><h3><span class="ja">脳卒中の方向けの Frontal Assessment Battery 短縮版の開発</span><span class="en">Development of the short version of the Frontal Assessment Battery for stroke</span></h3>
+          <p><span class="ja">The Asia-Pacific Stroke Conference 2025（共同演者）</span><span class="en">The Asia-Pacific Stroke Conference 2025 (co-author)</span></p></div>
       </li>
       <li>
         <time datetime="2025">2025</time>
-        <div><span class="cat"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">科研費（若手研究）に採択されました</span><span class="en">Awarded a JSPS KAKENHI Grant for Early-Career Scientists</span></h3>
-          <p><span class="ja">脳卒中後の注意障害を、日常の様子の観察から評価する方法を見直す研究です（2025〜2027年, 代表）。</span><span class="en">Rethinking how attention deficits after stroke are assessed through observation (2025–2027, PI).</span></p></div>
-      </li>
-      <li>
-        <time datetime="2025">2025</time>
-        <div><span class="cat"><span class="ja">お知らせ</span><span class="en">Update</span></span><h3><span class="ja">神戸大学大学院で博士（保健学）を取得しました</span><span class="en">Received a PhD in Health Sciences from Kobe University</span></h3></div>
+        <div><span class="cat fund"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">科研費（若手研究）に採択（代表）</span><span class="en">JSPS KAKENHI Grant for Early-Career Scientists (PI)</span></h3>
+          <p><span class="ja">脳卒中後の注意障害を、日常の様子の観察から評価する方法を見直す研究です（2025〜2027年）。</span><span class="en">Rethinking how attention deficits after stroke are assessed through observation (2025–2027).</span></p></div>
       </li>
       <li>
         <time datetime="2024">2024</time>
-        <div><span class="cat"><span class="ja">お知らせ</span><span class="en">Update</span></span><h3><span class="ja">湘南医療大学 作業療法学専攻の助教に着任しました</span><span class="en">Joined Shonan University of Medical Sciences as Assistant Professor</span></h3></div>
+        <div><span class="cat fund"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">東京都公立大学法人 研究費に採択（分担）</span><span class="en">Tokyo Metropolitan Public University Corporation grant (co-investigator)</span></h3>
+          <p><span class="ja">ワーキングメモリー（一時的に覚えておく力）を評価するN-back課題の開発（2024〜2025年）。</span><span class="en">Developing an N-back task to assess working memory (2024–2025).</span></p></div>
       </li>
-    </ol>
+      <li>
+        <time datetime="2023">2023</time>
+        <div><span class="cat fund"><span class="ja">研究費</span><span class="en">Grant</span></span><h3><span class="ja">神奈川県作業療法士会 研究助成に採択（分担）</span><span class="en">Kanagawa Association of Occupational Therapists research grant (co-investigator)</span></h3>
+          <p><span class="ja">集中治療センターにおける作業療法教育に関する実態調査（2023〜2025年）。</span><span class="en">Survey of occupational therapy education in intensive care (2023–2025).</span></p></div>
+      </li>
+      </ol>
+    </details>
+    <p class="more"><span class="ja">これより前の発表を含む一覧は <a href="https://researchmap.jp/tkyk-miyauchi/presentations" target="_blank" rel="noopener">researchmap</a> をご覧ください。</span><span class="en">For the full list of presentations, see <a href="https://researchmap.jp/tkyk-miyauchi/presentations?lang=en" target="_blank" rel="noopener">researchmap</a>.</span></p>
   </section>
 
   <section class="wrap narrow" id="publications" aria-labelledby="pub-h">
