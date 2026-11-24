@@ -667,7 +667,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
   t.setAttribute('data-goatcounter',GC+'/count');document.body.appendChild(t);
   /* 今日（日本時間）と累計の訪問者数を表示。取得できない場合は何も表示しない */
   var today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
-  function get(q){return fetch(GC+'/counter/TOTAL.json'+q).then(function(r){if(!r.ok)throw r;return r.json()}).then(function(d){return d.count})}
+  function get(q){return fetch(GC+'/counter/TOTAL.json'+q,{cache:'no-cache'}).then(function(r){if(!r.ok)throw r;return r.json()}).then(function(d){return d.count})}
   Promise.all([get('?start='+today),get('')]).then(function(v){
     document.getElementById('v-today').textContent=v[0];
     document.getElementById('v-total').textContent=v[1];
